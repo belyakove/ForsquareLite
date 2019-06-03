@@ -34,6 +34,8 @@
 		44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34622A553930036AA05 /* APIRequestInterceptor.swift */; };
 		44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34822A556620036AA05 /* FoursquareAuthenticationInterceptor.swift */; };
 		44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */; };
+		44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34E22A5C41A0036AA05 /* Venue.swift */; };
+		44ABE35122A5C44F0036AA05 /* MapCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		44ABE34622A553930036AA05 /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
 		44ABE34822A556620036AA05 /* FoursquareAuthenticationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareAuthenticationInterceptor.swift; sourceTree = "<group>"; };
 		44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPIParser.swift; sourceTree = "<group>"; };
+		44ABE34E22A5C41A0036AA05 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,9 +163,9 @@
 		44ABE32722A536460036AA05 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				44ABE34D22A5C4090036AA05 /* Entities */,
+				44ABE34C22A5C3FA0036AA05 /* Map */,
 				44ABE34322A551DD0036AA05 /* Authentication */,
-				44ABE33922A540610036AA05 /* MapCoordinateRect.swift */,
-				44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */,
 				44ABE32822A536600036AA05 /* Cancellable.swift */,
 			);
 			path = Foundation;
@@ -233,6 +237,24 @@
 				44ABE34422A552180036AA05 /* Credentials.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		44ABE34C22A5C3FA0036AA05 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE33922A540610036AA05 /* MapCoordinateRect.swift */,
+				44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */,
+				44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		44ABE34D22A5C4090036AA05 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE34E22A5C41A0036AA05 /* Venue.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,10 +368,12 @@
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
 				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
+				44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */,
 				44ABE33822A53FE20036AA05 /* SearchRequestParser.swift in Sources */,
 				44ABE34522A552180036AA05 /* Credentials.swift in Sources */,
 				44ABE32522A536120036AA05 /* ServicesBuilder.swift in Sources */,
 				44ABE32222A536120036AA05 /* APIRequest.swift in Sources */,
+				44ABE35122A5C44F0036AA05 /* MapCoordinate.swift in Sources */,
 				44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
