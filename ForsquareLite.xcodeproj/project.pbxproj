@@ -23,6 +23,7 @@
 		44ABE32922A536600036AA05 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32822A536600036AA05 /* Cancellable.swift */; };
 		44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32B22A5374C0036AA05 /* Environment.swift */; };
 		44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE32C22A5374C0036AA05 /* Configuration.plist */; };
+		44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32F22A537A60036AA05 /* ServicesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		44ABE32822A536600036AA05 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		44ABE32B22A5374C0036AA05 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		44ABE32C22A5374C0036AA05 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		44ABE32F22A537A60036AA05 /* ServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +104,10 @@
 		44ABE31622A535D30036AA05 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				44ABE31722A536120036AA05 /* Networking */,
+				44ABE32F22A537A60036AA05 /* ServicesProvider.swift */,
 				44ABE31D22A536120036AA05 /* Services.swift */,
 				44ABE31E22A536120036AA05 /* ServicesBuilder.swift */,
+				44ABE31722A536120036AA05 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
+				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,

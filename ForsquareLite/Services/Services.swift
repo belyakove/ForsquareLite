@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Services: NSObject {
+class Services: NSObject, ServicesProvider {
     
     var networkingService: NetworkingService
     

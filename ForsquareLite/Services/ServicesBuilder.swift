@@ -10,7 +10,7 @@ import UIKit
 
 class ServicesBuilder: NSObject {
 
-    class func buildServices(environment: Environment) -> Services {
+    class func buildServices(environment: Environment) -> ServicesProvider {
         let networkingService = NetworkingServiceImpl(baseURL: environment.baseURL)
         
         return Services(networkService: networkingService)
