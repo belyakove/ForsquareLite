@@ -13,6 +13,16 @@
 		445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2C22A52FB900178CC7 /* Assets.xcassets */; };
 		445F5D3022A52FB900178CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2E22A52FB900178CC7 /* LaunchScreen.storyboard */; };
 		44ABE31522A532080036AA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABE31422A532080036AA05 /* Alamofire.framework */; };
+		44ABE31F22A536120036AA05 /* APIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31822A536120036AA05 /* APIParser.swift */; };
+		44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31922A536120036AA05 /* NetworkingServiceImpl.swift */; };
+		44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31A22A536120036AA05 /* NetworkingService.swift */; };
+		44ABE32222A536120036AA05 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31B22A536120036AA05 /* APIRequest.swift */; };
+		44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31C22A536120036AA05 /* BasicAPIRequest.swift */; };
+		44ABE32422A536120036AA05 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31D22A536120036AA05 /* Services.swift */; };
+		44ABE32522A536120036AA05 /* ServicesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE31E22A536120036AA05 /* ServicesBuilder.swift */; };
+		44ABE32922A536600036AA05 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32822A536600036AA05 /* Cancellable.swift */; };
+		44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32B22A5374C0036AA05 /* Environment.swift */; };
+		44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE32C22A5374C0036AA05 /* Configuration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		445F5D2F22A52FB900178CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		445F5D3122A52FB900178CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44ABE31422A532080036AA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		44ABE31822A536120036AA05 /* APIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParser.swift; sourceTree = "<group>"; };
+		44ABE31922A536120036AA05 /* NetworkingServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceImpl.swift; sourceTree = "<group>"; };
+		44ABE31A22A536120036AA05 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		44ABE31B22A536120036AA05 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		44ABE31C22A536120036AA05 /* BasicAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAPIRequest.swift; sourceTree = "<group>"; };
+		44ABE31D22A536120036AA05 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		44ABE31E22A536120036AA05 /* ServicesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesBuilder.swift; sourceTree = "<group>"; };
+		44ABE32822A536600036AA05 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		44ABE32B22A5374C0036AA05 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		44ABE32C22A5374C0036AA05 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +78,11 @@
 		445F5D2222A52FB300178CC7 /* ForsquareLite */ = {
 			isa = PBXGroup;
 			children = (
+				44ABE32A22A5374C0036AA05 /* Configuration */,
 				445F5D2322A52FB300178CC7 /* AppDelegate.swift */,
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+				44ABE32622A536330036AA05 /* Common */,
+				44ABE31622A535D30036AA05 /* Services */,
 				445F5D2922A52FB300178CC7 /* Main.storyboard */,
 				445F5D2C22A52FB900178CC7 /* Assets.xcassets */,
 				445F5D2E22A52FB900178CC7 /* LaunchScreen.storyboard */,
@@ -74,6 +97,53 @@
 				44ABE31422A532080036AA05 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44ABE31622A535D30036AA05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE31722A536120036AA05 /* Networking */,
+				44ABE31D22A536120036AA05 /* Services.swift */,
+				44ABE31E22A536120036AA05 /* ServicesBuilder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		44ABE31722A536120036AA05 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE31822A536120036AA05 /* APIParser.swift */,
+				44ABE31922A536120036AA05 /* NetworkingServiceImpl.swift */,
+				44ABE31A22A536120036AA05 /* NetworkingService.swift */,
+				44ABE31B22A536120036AA05 /* APIRequest.swift */,
+				44ABE31C22A536120036AA05 /* BasicAPIRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		44ABE32622A536330036AA05 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE32722A536460036AA05 /* Foundation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		44ABE32722A536460036AA05 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE32822A536600036AA05 /* Cancellable.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		44ABE32A22A5374C0036AA05 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE32B22A5374C0036AA05 /* Environment.swift */,
+				44ABE32C22A5374C0036AA05 /* Configuration.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				445F5D3022A52FB900178CC7 /* LaunchScreen.storyboard in Resources */,
+				44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */,
 				445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */,
 				445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */,
 			);
@@ -171,7 +242,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ABE32922A536600036AA05 /* Cancellable.swift in Sources */,
+				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
+				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
+				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
+				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
+				44ABE32422A536120036AA05 /* Services.swift in Sources */,
+				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
+				44ABE32522A536120036AA05 /* ServicesBuilder.swift in Sources */,
+				44ABE32222A536120036AA05 /* APIRequest.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
