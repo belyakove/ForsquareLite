@@ -82,7 +82,7 @@
 			children = (
 				44ABE32A22A5374C0036AA05 /* Configuration */,
 				445F5D2322A52FB300178CC7 /* AppDelegate.swift */,
-				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+				44ABE33122A538740036AA05 /* UI */,
 				44ABE32622A536330036AA05 /* Common */,
 				44ABE31622A535D30036AA05 /* Services */,
 				445F5D2922A52FB300178CC7 /* Main.storyboard */,
@@ -147,6 +147,22 @@
 				44ABE32C22A5374C0036AA05 /* Configuration.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		44ABE33122A538740036AA05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE33222A538810036AA05 /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		44ABE33222A538810036AA05 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
