@@ -13,6 +13,7 @@
 		445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2922A52FB300178CC7 /* Main.storyboard */; };
 		445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2C22A52FB900178CC7 /* Assets.xcassets */; };
 		445F5D3022A52FB900178CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2E22A52FB900178CC7 /* LaunchScreen.storyboard */; };
+		44ABE31522A532080036AA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABE31422A532080036AA05 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		445F5D2C22A52FB900178CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		445F5D2F22A52FB900178CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		445F5D3122A52FB900178CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44ABE31422A532080036AA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ABE31522A532080036AA05 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				445F5D2222A52FB300178CC7 /* ForsquareLite */,
 				445F5D2122A52FB300178CC7 /* Products */,
+				44ABE31322A532070036AA05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +71,14 @@
 			path = ForsquareLite;
 			sourceTree = "<group>";
 		};
+		44ABE31322A532070036AA05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE31422A532080036AA05 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +89,7 @@
 				445F5D1C22A52FB300178CC7 /* Sources */,
 				445F5D1D22A52FB300178CC7 /* Frameworks */,
 				445F5D1E22A52FB300178CC7 /* Resources */,
+				44ABE31222A531690036AA05 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +145,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44ABE31222A531690036AA05 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		445F5D1C22A52FB300178CC7 /* Sources */ = {
@@ -287,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ForsquareLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ForsquareLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
