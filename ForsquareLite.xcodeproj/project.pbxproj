@@ -24,6 +24,16 @@
 		44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32B22A5374C0036AA05 /* Environment.swift */; };
 		44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE32C22A5374C0036AA05 /* Configuration.plist */; };
 		44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE32F22A537A60036AA05 /* ServicesProvider.swift */; };
+		44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE33522A53F8E0036AA05 /* SearchRequest.swift */; };
+		44ABE33822A53FE20036AA05 /* SearchRequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE33722A53FE20036AA05 /* SearchRequestParser.swift */; };
+		44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE33922A540610036AA05 /* MapCoordinateRect.swift */; };
+		44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */; };
+		44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE33E22A54FB20036AA05 /* FoursquareAPIService.swift */; };
+		44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34122A551BE0036AA05 /* AuthenticationInfo.swift */; };
+		44ABE34522A552180036AA05 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34422A552180036AA05 /* Credentials.swift */; };
+		44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34622A553930036AA05 /* APIRequestInterceptor.swift */; };
+		44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34822A556620036AA05 /* FoursquareAuthenticationInterceptor.swift */; };
+		44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +56,16 @@
 		44ABE32B22A5374C0036AA05 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		44ABE32C22A5374C0036AA05 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		44ABE32F22A537A60036AA05 /* ServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
+		44ABE33522A53F8E0036AA05 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		44ABE33722A53FE20036AA05 /* SearchRequestParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestParser.swift; sourceTree = "<group>"; };
+		44ABE33922A540610036AA05 /* MapCoordinateRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCoordinateRect.swift; sourceTree = "<group>"; };
+		44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapCoordinateRect+MapKit.swift"; sourceTree = "<group>"; };
+		44ABE33E22A54FB20036AA05 /* FoursquareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareAPIService.swift; sourceTree = "<group>"; };
+		44ABE34122A551BE0036AA05 /* AuthenticationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInfo.swift; sourceTree = "<group>"; };
+		44ABE34422A552180036AA05 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		44ABE34622A553930036AA05 /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
+		44ABE34822A556620036AA05 /* FoursquareAuthenticationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareAuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPIParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +104,8 @@
 				445F5D2322A52FB300178CC7 /* AppDelegate.swift */,
 				44ABE33122A538740036AA05 /* UI */,
 				44ABE32622A536330036AA05 /* Common */,
+				44ABE33422A53F710036AA05 /* Parsers */,
+				44ABE33322A53F680036AA05 /* Requests */,
 				44ABE31622A535D30036AA05 /* Services */,
 				445F5D2922A52FB300178CC7 /* Main.storyboard */,
 				445F5D2C22A52FB900178CC7 /* Assets.xcassets */,
@@ -107,6 +129,7 @@
 				44ABE32F22A537A60036AA05 /* ServicesProvider.swift */,
 				44ABE31D22A536120036AA05 /* Services.swift */,
 				44ABE31E22A536120036AA05 /* ServicesBuilder.swift */,
+				44ABE33D22A54F990036AA05 /* API */,
 				44ABE31722A536120036AA05 /* Networking */,
 			);
 			path = Services;
@@ -116,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE31822A536120036AA05 /* APIParser.swift */,
+				44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */,
 				44ABE31922A536120036AA05 /* NetworkingServiceImpl.swift */,
 				44ABE31A22A536120036AA05 /* NetworkingService.swift */,
 				44ABE31B22A536120036AA05 /* APIRequest.swift */,
@@ -135,6 +159,9 @@
 		44ABE32722A536460036AA05 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				44ABE34322A551DD0036AA05 /* Authentication */,
+				44ABE33922A540610036AA05 /* MapCoordinateRect.swift */,
+				44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */,
 				44ABE32822A536600036AA05 /* Cancellable.swift */,
 			);
 			path = Foundation;
@@ -163,6 +190,49 @@
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44ABE33322A53F680036AA05 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE33522A53F8E0036AA05 /* SearchRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		44ABE33422A53F710036AA05 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE33722A53FE20036AA05 /* SearchRequestParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		44ABE33D22A54F990036AA05 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE33E22A54FB20036AA05 /* FoursquareAPIService.swift */,
+				44ABE34022A551690036AA05 /* Interceptors */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		44ABE34022A551690036AA05 /* Interceptors */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE34622A553930036AA05 /* APIRequestInterceptor.swift */,
+				44ABE34822A556620036AA05 /* FoursquareAuthenticationInterceptor.swift */,
+			);
+			path = Interceptors;
+			sourceTree = "<group>";
+		};
+		44ABE34322A551DD0036AA05 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE34122A551BE0036AA05 /* AuthenticationInfo.swift */,
+				44ABE34422A552180036AA05 /* Credentials.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,17 +332,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				44ABE32922A536600036AA05 /* Cancellable.swift in Sources */,
+				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
+				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
+				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
+				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
+				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
+				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
+				44ABE33822A53FE20036AA05 /* SearchRequestParser.swift in Sources */,
+				44ABE34522A552180036AA05 /* Credentials.swift in Sources */,
 				44ABE32522A536120036AA05 /* ServicesBuilder.swift in Sources */,
 				44ABE32222A536120036AA05 /* APIRequest.swift in Sources */,
+				44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
+				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

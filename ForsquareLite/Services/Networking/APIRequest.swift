@@ -13,11 +13,13 @@ enum APIRequestMethod {
     case POST
 }
 
-protocol APIRequest {
+protocol APIRequest: class {
     var path: String { get }
     var method: APIRequestMethod { get }
     var queryParameters: [String: String]? { get }
     var parameters: [String: Any]? { get }
     var headers: [String: String]? { get }
     var parser: APIParser { get }
+    
+    func addQueryParameter(key: String, value: String) -> Void
 }

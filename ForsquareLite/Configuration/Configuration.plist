@@ -7,12 +7,16 @@
 	<key>Production</key>
 	<dict>
 		<key>baseURL</key>
-		<string>https://production</string>
+		<string>https://api.foursquare.com</string>
+		<key>clientID</key>
+		<string>PVCD1HFFL0ZJEOJD2UJF3WGDME0OFX4K31PWVIH1LMGAITU1</string>
+		<key>clientSecret</key>
+		<string>04MEDW5JU325IMOJNIWACFEZGMG05HVKA34V3C4ZO2HMZUNB</string>
 	</dict>
 	<key>Staging</key>
 	<dict>
 		<key>baseURL</key>
-		<string>http://ec2-18-220-9-247.us-east-2.compute.amazonaws.com:5000/</string>
+		<string></string>
 	</dict>
 </dict>
 </plist>

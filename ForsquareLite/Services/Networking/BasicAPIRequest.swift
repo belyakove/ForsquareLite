@@ -8,7 +8,11 @@
 
 import UIKit
 
-extension APIRequest {
+class BasicAPIRequest: APIRequest {
+
+    var parser: APIParser = DefaultAPIParser()
+    
+    private var additionalParameters: [String: String] = [String: String]()
     
     var path: String {
         return ""
@@ -19,7 +23,20 @@ extension APIRequest {
     }
     
     var queryParameters: [String : String]? {
-        return nil
+        
+        guard self.defaultQueryParameters != nil || !additionalParameters.isEmpty else {
+                return nil
+        }
+        
+        var queryParameters = [String : String]()
+        
+        if let defaultParameters = self.defaultQueryParameters {
+           queryParameters.merge(defaultParameters) { (_, last) in last }
+        }
+
+        queryParameters.merge(additionalParameters) { (_, last) -> String in last }
+        
+        return queryParameters
     }
     
     var parameters: [String : Any]? {
@@ -29,4 +46,13 @@ extension APIRequest {
     var headers: [String : String]? {
         return nil
     }
+    
+    var defaultQueryParameters: [String : String]? {
+        return nil
+    }
+    
+    func addQueryParameter(key: String, value: String) {
+        self.additionalParameters[key] = value
+    }
+    
 }

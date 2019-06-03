@@ -11,9 +11,12 @@ import UIKit
 class ServicesBuilder: NSObject {
 
     class func buildServices(environment: Environment) -> ServicesProvider {
+        
         let networkingService = NetworkingServiceImpl(baseURL: environment.baseURL)
         
-        return Services(networkService: networkingService)
+        let apiService = FoursquareAPIService(apiService: networkingService, authenticatoinInfo: environment.authenticationInfo)
+        
+        return Services(networkService: apiService)
     }
     
 }

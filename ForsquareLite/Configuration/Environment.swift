@@ -18,6 +18,8 @@ struct Environment {
     struct Keys {
         static let Common = "Common"
         static let BaseURL = "baseURL"
+        static let clientID = "clientID"
+        static let clientSecret = "clientSecret"
     }
     
     var configuration: [String: Any] = [:]
@@ -49,5 +51,11 @@ struct Environment {
 extension Environment {
     var baseURL: URL {
         return URL(string: self.configuration[Keys.BaseURL] as? String ?? "")!
+    }
+    
+    var authenticationInfo: AuthenticationInfo {
+        let clientID = self.configuration[Keys.clientID] as? String ?? ""
+        let clientSecret = self.configuration[Keys.clientSecret] as? String ?? ""
+        return Credentials(clientID: clientID, clientSecret: clientSecret)
     }
 }
