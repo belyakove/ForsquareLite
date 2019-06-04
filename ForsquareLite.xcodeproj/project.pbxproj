@@ -47,6 +47,15 @@
 		44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */; };
 		44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */; };
 		44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */; };
+		44ABE36E22A7107F0036AA05 /* DetailsRequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36D22A7107F0036AA05 /* DetailsRequestParser.swift */; };
+		44ABE37022A713BC0036AA05 /* VenueDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36F22A713BC0036AA05 /* VenueDetails.swift */; };
+		44ABE37322A714080036AA05 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37222A714080036AA05 /* Rating.swift */; };
+		44ABE37522A714F10036AA05 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37422A714F10036AA05 /* Price.swift */; };
+		44ABE37722A71AC50036AA05 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37622A71AC50036AA05 /* UIColor+Hex.swift */; };
+		44ABE37922A720100036AA05 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37822A720100036AA05 /* RatingView.swift */; };
+		44ABE37B22A720930036AA05 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE37A22A720930036AA05 /* RatingView.xib */; };
+		44ABE37D22A72EF70036AA05 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37C22A72EF70036AA05 /* PriceView.swift */; };
+		44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE37E22A72EFF0036AA05 /* PriceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +101,15 @@
 		44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
 		44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRouter.swift; sourceTree = "<group>"; };
 		44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRequest.swift; sourceTree = "<group>"; };
+		44ABE36D22A7107F0036AA05 /* DetailsRequestParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRequestParser.swift; sourceTree = "<group>"; };
+		44ABE36F22A713BC0036AA05 /* VenueDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetails.swift; sourceTree = "<group>"; };
+		44ABE37222A714080036AA05 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		44ABE37422A714F10036AA05 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		44ABE37622A71AC50036AA05 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		44ABE37822A720100036AA05 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		44ABE37A22A720930036AA05 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
+		44ABE37C22A72EF70036AA05 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		44ABE37E22A72EFF0036AA05 /* PriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +240,10 @@
 			children = (
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
 				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
+				44ABE37822A720100036AA05 /* RatingView.swift */,
+				44ABE37A22A720930036AA05 /* RatingView.xib */,
+				44ABE37C22A72EF70036AA05 /* PriceView.swift */,
+				44ABE37E22A72EFF0036AA05 /* PriceView.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE33722A53FE20036AA05 /* SearchRequestParser.swift */,
+				44ABE36D22A7107F0036AA05 /* DetailsRequestParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -285,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE34E22A5C41A0036AA05 /* Venue.swift */,
+				44ABE37122A713F70036AA05 /* VenueDetails */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -311,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE35E22A66D230036AA05 /* MKMapView+Utilities.swift */,
+				44ABE37622A71AC50036AA05 /* UIColor+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +346,16 @@
 				44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */,
 			);
 			path = Annotations;
+			sourceTree = "<group>";
+		};
+		44ABE37122A713F70036AA05 /* VenueDetails */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE36F22A713BC0036AA05 /* VenueDetails.swift */,
+				44ABE37222A714080036AA05 /* Rating.swift */,
+				44ABE37422A714F10036AA05 /* Price.swift */,
+			);
+			path = VenueDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,8 +418,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				445F5D3022A52FB900178CC7 /* LaunchScreen.storyboard in Resources */,
+				44ABE37B22A720930036AA05 /* RatingView.xib in Resources */,
 				44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */,
 				445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */,
+				44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */,
 				445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,14 +458,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ABE36E22A7107F0036AA05 /* DetailsRequestParser.swift in Sources */,
 				44ABE32922A536600036AA05 /* Cancellable.swift in Sources */,
+				44ABE37D22A72EF70036AA05 /* PriceView.swift in Sources */,
 				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
+				44ABE37922A720100036AA05 /* RatingView.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
 				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
 				44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */,
+				44ABE37722A71AC50036AA05 /* UIColor+Hex.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
 				44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */,
 				44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */,
@@ -439,9 +480,11 @@
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
 				44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */,
 				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
+				44ABE37522A714F10036AA05 /* Price.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
 				44ABE36122A66FF80036AA05 /* MapCoordiante+MapKit.swift in Sources */,
+				44ABE37022A713BC0036AA05 /* VenueDetails.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
 				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
 				44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */,
@@ -451,6 +494,7 @@
 				44ABE32222A536120036AA05 /* APIRequest.swift in Sources */,
 				44ABE35122A5C44F0036AA05 /* MapCoordinate.swift in Sources */,
 				44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */,
+				44ABE37322A714080036AA05 /* Rating.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
 				44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,

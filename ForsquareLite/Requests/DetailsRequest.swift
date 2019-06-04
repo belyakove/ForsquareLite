@@ -11,9 +11,14 @@ import UIKit
 class DetailsRequest: BasicAPIRequest {
 
     let venueID: String
+    let requestParser = DetailsRequestParser()
     
     init(venueID: String) {
         self.venueID = venueID
+    }
+    
+    override var parser: APIParser {
+        return requestParser
     }
     
     override var path: String {

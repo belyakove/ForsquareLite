@@ -13,6 +13,7 @@ class RestaurantDetailsViewController: UIViewController {
     var venue: Venue!
     var api: NetworkingService!
     
+    @IBOutlet weak var stackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,8 +23,41 @@ class RestaurantDetailsViewController: UIViewController {
         
         let request = DetailsRequest(venueID: self.venue.id)
         self.api.executeRequest(request) { (result, error) in
-            print("result = \(result)")
+           
+            guard let details = result as? VenueDetails else {
+                return
+            }
+            
+            self.details = details
         }
         
     }
+    
+    var details: VenueDetails? {
+        didSet {
+            self.showDetails(self.details)
+        }
+    }
+    
+    func showDetails(_ details: VenueDetails?) {
+    
+        var views = [UIView]()
+        
+        if let rating = details?.rating {
+            views.append(RatingView.withRating(rating))
+        }
+        
+        if let price = details?.price {
+            views.append(PriceView.withPrice(price))
+        }
+        
+        self.displayViews(views)
+    }
+    
+    func displayViews(_ views: [UIView]) {
+        for view in views {
+            self.stackView.addArrangedSubview(view)
+        }
+    }
+    
 }

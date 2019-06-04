@@ -11,5 +11,6 @@ import UIKit
 typealias NetworkRequestCompletionBlock = (Any?, Error?) -> Void
 
 protocol NetworkingService {
-    func executeRequest(_ request: APIRequest, completionBlock: NetworkRequestCompletionBlock?) -> Cancellable?
+    @discardableResult func executeRequest(_ request: APIRequest,
+                                           completionBlock: NetworkRequestCompletionBlock?) -> Cancellable?
 }
