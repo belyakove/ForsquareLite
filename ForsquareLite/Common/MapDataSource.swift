@@ -11,6 +11,6 @@ import UIKit
 typealias MapDataSourceCompletionBlock = ([Venue]?, Error?) ->Void
 
 protocol MapDataSource {
-    func venues(inRect rect: MapCoordinateRect,
-                completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable?
+    @discardableResult func venues(inRect rect: MapCoordinateRect,
+                                   completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable?
 }

@@ -12,21 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
     var services: ServicesProvider!
+    var mainFlowCoordinator: MainFlowCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let environment = Environment(.production)
         self.services = ServicesBuilder.buildServices(environment: environment)
         
-        
-        let navigationController = window?.rootViewController as? UINavigationController
-        let mapViewController = navigationController?.viewControllers.first as? MapViewController
-        
-        mapViewController?.mapDataSource = VenuesLoader(api: self.services.networkingService)
-        
-        //let request = SearchRequest(coordinateRect: coordinates)
+        self.mainFlowCoordinator = MainFlowCoordinator(window: self.window ?? UIWindow(),
+                                                       services: self.services)
+        self.mainFlowCoordinator?.start()
         
         return true
     }

@@ -16,7 +16,7 @@ class VenuesLoader: NSObject, MapDataSource {
         self.api = api
     }
     
-    func venues(inRect rect: MapCoordinateRect, completionBlock: @escaping ([Venue]?, Error?) -> Void) -> Cancellable? {
+    @discardableResult func venues(inRect rect: MapCoordinateRect, completionBlock: @escaping ([Venue]?, Error?) -> Void) -> Cancellable? {
         
         let request = SearchRequest(coordinateRect: rect)
         

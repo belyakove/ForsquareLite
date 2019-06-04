@@ -26,6 +26,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         self.mapView.showsUserLocation = true
+        self.mapView.setUserTrackingMode(.follow, animated: true)
         self.setupUserTrackingButtonAndScaleView()
         
         self.locationManager.delegate = self
