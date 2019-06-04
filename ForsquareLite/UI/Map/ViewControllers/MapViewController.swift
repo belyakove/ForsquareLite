@@ -83,7 +83,8 @@ class MapViewController: UIViewController {
             guard let venues = venues else {
                 return
             }
-            self.updateAnnotationsForVenues(venues)
+            let annotations = self.annotations(forVenues: venues)
+            self.updateAnnotations(annotations)
         })
     }
     
@@ -94,17 +95,22 @@ class MapViewController: UIViewController {
             guard let venues = venues else {
                 return
             }
-            self.updateAnnotationsForVenues(venues)
+            
+            let annotations = self.annotations(forVenues: venues)
+            self.updateAnnotations(annotations)
         }
     }
     
-    private func updateAnnotationsForVenues(_ venues: [Venue]) {
-        
+    private func annotations(forVenues venues: [Venue]) -> Set<RestaurantAnnotation> {
         var annotations = Set<RestaurantAnnotation>()
         for venue in venues {
             let annotation = RestaurantAnnotation(venue: venue)
             annotations.insert(annotation)
         }
+        return annotations
+    }
+    
+    private func updateAnnotations(_ annotations:Set<RestaurantAnnotation>) {
         
         let before = self.currentAnnotations
         let after = annotations
@@ -130,15 +136,15 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            return nil
+        if annotation is RestaurantAnnotation {
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: RestaurantAnnotation.ReuseID)
+            annotationView?.canShowCallout = true
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            annotationView?.clusteringIdentifier = "Restaurant"
+            return annotationView
         }
         
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: RestaurantAnnotation.ReuseID)
-        annotationView?.canShowCallout = true
-        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        
-        return annotationView
+        return nil
     }
     
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
