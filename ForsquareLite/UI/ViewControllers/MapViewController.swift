@@ -18,6 +18,10 @@ class MapViewController: UIViewController {
     
     private let locationManager = CLLocationManager()
 
+    var mapDataSource: MapDataSource!
+    
+    var loadWorkItem: DispatchWorkItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +36,7 @@ class MapViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.loadVenues(inRegion: self.mapView.region)
     }
 
     private func setupUserTrackingButtonAndScaleView() {
@@ -64,12 +69,63 @@ class MapViewController: UIViewController {
         NSLayoutConstraint.activate([compassView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50), compassView.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)])
         
     }
+    
+    private func loadVenues(inRegion region: MKCoordinateRegion) {
+        
+        let rect = MapCoordinateRect(coordinateRegion: region)
+        
+        self.mapDataSource.venues(inRect: rect, completionBlock: { (venues, error) in
+            
+            guard let venues = venues else {
+                return
+            }
+            
+            for venue in venues {
+                let annotation = MKPointAnnotation()
+                annotation.title = venue.name
+                
+                let coordinate = CLLocationCoordinate2D(latitude: venue.coordinate.latitude,
+                                                        longitude: venue.coordinate.longitude)
+                
+                annotation.coordinate = coordinate
+                
+                self.mapView.addAnnotation(annotation)
+            }
+        })
+    }
 
+    
+    
 }
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         let locationAuthorized = status == .authorizedWhenInUse
         self.userTrackingButton.isHidden = !locationAuthorized
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    
+    
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        if let workItem = self.loadWorkItem {
+            workItem.cancel()
+            self.loadWorkItem = nil
+        }
+        
+        let loadWorkItem = DispatchWorkItem(block: { [weak self] in
+            
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.loadVenues(inRegion: mapView.region)
+        })
+        
+        self.loadWorkItem = loadWorkItem
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: loadWorkItem)
     }
 }

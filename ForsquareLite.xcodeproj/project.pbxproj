@@ -36,6 +36,8 @@
 		44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */; };
 		44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE34E22A5C41A0036AA05 /* Venue.swift */; };
 		44ABE35122A5C44F0036AA05 /* MapCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */; };
+		44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35222A5CAEC0036AA05 /* MapDataSource.swift */; };
+		44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35422A5CBD40036AA05 /* VenuesLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		44ABE34A22A55C1D0036AA05 /* DefaultAPIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPIParser.swift; sourceTree = "<group>"; };
 		44ABE34E22A5C41A0036AA05 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinate.swift; sourceTree = "<group>"; };
+		44ABE35222A5CAEC0036AA05 /* MapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataSource.swift; sourceTree = "<group>"; };
+		44ABE35422A5CBD40036AA05 /* VenuesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				44ABE32F22A537A60036AA05 /* ServicesProvider.swift */,
 				44ABE31D22A536120036AA05 /* Services.swift */,
 				44ABE31E22A536120036AA05 /* ServicesBuilder.swift */,
+				44ABE35422A5CBD40036AA05 /* VenuesLoader.swift */,
 				44ABE33D22A54F990036AA05 /* API */,
 				44ABE31722A536120036AA05 /* Networking */,
 			);
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE32722A536460036AA05 /* Foundation */,
+				44ABE35222A5CAEC0036AA05 /* MapDataSource.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				44ABE32922A536600036AA05 /* Cancellable.swift in Sources */,
 				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
+				44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
 				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
@@ -366,6 +373,7 @@
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
+				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
 				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
 				44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */,

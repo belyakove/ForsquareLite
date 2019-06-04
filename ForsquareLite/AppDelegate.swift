@@ -21,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.services = ServicesBuilder.buildServices(environment: environment)
         
         
-        let coordinates = MapCoordinateRect(south: 52.21, west: 4.53, north: 52.23, east: 4.55)
-        let request = SearchRequest(coordinateRect: coordinates)
+        let navigationController = window?.rootViewController as? UINavigationController
+        let mapViewController = navigationController?.viewControllers.first as? MapViewController
+        
+        mapViewController?.mapDataSource = VenuesLoader(api: self.services.networkingService)
+        
+        //let request = SearchRequest(coordinateRect: coordinates)
         
         return true
     }

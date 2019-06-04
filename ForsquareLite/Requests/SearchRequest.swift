@@ -30,6 +30,7 @@ class SearchRequest: BasicAPIRequest {
         parameters["sw"] = "\(coordinateRect.south),\(coordinateRect.west)"
         parameters["intent"] = "browse"
         parameters["v"] = "20190603"
+        parameters["query"] = "restaurant"
         
         return parameters
     }
