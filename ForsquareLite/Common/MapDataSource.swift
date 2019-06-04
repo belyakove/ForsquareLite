@@ -13,4 +13,8 @@ typealias MapDataSourceCompletionBlock = ([Venue]?, Error?) ->Void
 protocol MapDataSource {
     @discardableResult func venues(inRect rect: MapCoordinateRect,
                                    completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable?
+    @discardableResult func venues(atLocation location: MapCoordinate,
+                                   radius: Double,
+                                   completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable?
+
 }

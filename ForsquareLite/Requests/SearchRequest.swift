@@ -10,12 +10,27 @@ import UIKit
 
 class SearchRequest: BasicAPIRequest {
     
-    private var coordinateRect: MapCoordinateRect
+    private var coordinateRect: MapCoordinateRect?
+    private var center: MapCoordinate?
+    private var radius: Double?
+    
+    private var responseParser = SearchRequestParser()
+    
+    override internal var parser: APIParser {
+        return responseParser
+    }
+    
+    private override init() {}
     
     init(coordinateRect: MapCoordinateRect) {
         self.coordinateRect = coordinateRect
         super.init()
-        self.parser = SearchRequestParser()
+    }
+    
+    init(center: MapCoordinate, radius: Double) {
+        self.center = center
+        self.radius = min(radius, 1000000)
+        super.init()
     }
     
     override var path: String {
@@ -26,11 +41,18 @@ class SearchRequest: BasicAPIRequest {
         
         var parameters = [String: String]()
         
-        parameters["ne"] = "\(coordinateRect.north),\(coordinateRect.east)"
-        parameters["sw"] = "\(coordinateRect.south),\(coordinateRect.west)"
+        if let coordinateRect = self.coordinateRect {
+            parameters["ne"] = "\(coordinateRect.north),\(coordinateRect.east)"
+            parameters["sw"] = "\(coordinateRect.south),\(coordinateRect.west)"
+        } else if let center = self.center, let radius = self.radius {
+            parameters["ll"] = "\(center.latitude),\(center.longitude)"
+            parameters["radius"] = "\(radius)"
+        }
+        
         parameters["intent"] = "browse"
         parameters["v"] = "20190603"
         parameters["query"] = "restaurant"
+        parameters["limit"] = "50"
         
         return parameters
     }

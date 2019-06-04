@@ -40,6 +40,8 @@
 		44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35422A5CBD40036AA05 /* VenuesLoader.swift */; };
 		44ABE35722A662790036AA05 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35622A662790036AA05 /* FlowCoordinator.swift */; };
 		44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */; };
+		44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE35E22A66D230036AA05 /* MKMapView+Utilities.swift */; };
+		44ABE36122A66FF80036AA05 /* MapCoordiante+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36022A66FF80036AA05 /* MapCoordiante+MapKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		44ABE35422A5CBD40036AA05 /* VenuesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesLoader.swift; sourceTree = "<group>"; };
 		44ABE35622A662790036AA05 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		44ABE35E22A66D230036AA05 /* MKMapView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Utilities.swift"; sourceTree = "<group>"; };
+		44ABE36022A66FF80036AA05 /* MapCoordiante+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapCoordiante+MapKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		44ABE32722A536460036AA05 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				44ABE35D22A66CF30036AA05 /* Extensions */,
 				44ABE34D22A5C4090036AA05 /* Entities */,
 				44ABE34C22A5C3FA0036AA05 /* Map */,
 				44ABE34322A551DD0036AA05 /* Authentication */,
@@ -257,6 +262,7 @@
 				44ABE33922A540610036AA05 /* MapCoordinateRect.swift */,
 				44ABE33A22A540610036AA05 /* MapCoordinateRect+MapKit.swift */,
 				44ABE35022A5C44F0036AA05 /* MapCoordinate.swift */,
+				44ABE36022A66FF80036AA05 /* MapCoordiante+MapKit.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -283,6 +289,14 @@
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		44ABE35D22A66CF30036AA05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE35E22A66D230036AA05 /* MKMapView+Utilities.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +408,10 @@
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
+				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
+				44ABE36122A66FF80036AA05 /* MapCoordiante+MapKit.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
 				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
 				44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */,

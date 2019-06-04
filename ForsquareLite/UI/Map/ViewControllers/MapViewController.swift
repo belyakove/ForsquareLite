@@ -32,12 +32,11 @@ class MapViewController: UIViewController {
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadVenues(inRegion: self.mapView.region)
+        self.loadVenues(center: self.mapView.region.center, radius: self.mapView.visibleRadius)
     }
 
     private func setupUserTrackingButtonAndScaleView() {
@@ -74,28 +73,39 @@ class MapViewController: UIViewController {
     private func loadVenues(inRegion region: MKCoordinateRegion) {
         
         let rect = MapCoordinateRect(coordinateRegion: region)
-        
         self.mapDataSource.venues(inRect: rect, completionBlock: { (venues, error) in
-            
             guard let venues = venues else {
                 return
             }
+            self.updateAnnotationsForVenues(venues)
             
-            for venue in venues {
-                let annotation = MKPointAnnotation()
-                annotation.title = venue.name
-                
-                let coordinate = CLLocationCoordinate2D(latitude: venue.coordinate.latitude,
-                                                        longitude: venue.coordinate.longitude)
-                
-                annotation.coordinate = coordinate
-                
-                self.mapView.addAnnotation(annotation)
-            }
         })
     }
-
     
+    private func loadVenues(center: CLLocationCoordinate2D, radius: Double) {
+        
+        let coordinate = MapCoordinate(coordinate: center)
+        self.mapDataSource.venues(atLocation: coordinate, radius: radius) { (venues, error) in
+            guard let venues = venues else {
+                return
+            }
+            self.updateAnnotationsForVenues(venues)
+        }
+    }
+    
+    private func updateAnnotationsForVenues(_ venues: [Venue]) {
+        for venue in venues {
+            let annotation = MKPointAnnotation()
+            annotation.title = venue.name
+            
+            let coordinate = CLLocationCoordinate2D(latitude: venue.coordinate.latitude,
+                                                    longitude: venue.coordinate.longitude)
+            
+            annotation.coordinate = coordinate
+            
+            self.mapView.addAnnotation(annotation)
+        }
+    }
     
 }
 
@@ -107,8 +117,6 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
-    
-    
     
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         if let workItem = self.loadWorkItem {
@@ -122,7 +130,14 @@ extension MapViewController: MKMapViewDelegate {
                 return
             }
             
-            strongSelf.loadVenues(inRegion: mapView.region)
+            let coordinate: CLLocationCoordinate2D
+            if mapView.userTrackingMode == .follow {
+                coordinate = mapView.userLocation.coordinate
+            } else {
+                coordinate = mapView.region.center
+            }
+            
+            strongSelf.loadVenues(center: coordinate, radius: mapView.visibleRadius)
         })
         
         self.loadWorkItem = loadWorkItem

@@ -19,6 +19,18 @@ class VenuesLoader: NSObject, MapDataSource {
     @discardableResult func venues(inRect rect: MapCoordinateRect, completionBlock: @escaping ([Venue]?, Error?) -> Void) -> Cancellable? {
         
         let request = SearchRequest(coordinateRect: rect)
+        return self.executeSearchRequest(request, completionBlock: completionBlock)
+    }
+    
+    @discardableResult func venues(atLocation location: MapCoordinate,
+                                   radius: Double,
+                                   completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable? {
+        
+        let request = SearchRequest(center: location, radius: radius)
+        return self.executeSearchRequest(request, completionBlock: completionBlock)
+    }
+
+    private func executeSearchRequest(_ request: SearchRequest, completionBlock: @escaping MapDataSourceCompletionBlock) -> Cancellable? {
         
         return self.api.executeRequest(request) { (result, error) in
             
@@ -35,4 +47,5 @@ class VenuesLoader: NSObject, MapDataSource {
             completionBlock(venues, nil)
         }
     }
+    
 }

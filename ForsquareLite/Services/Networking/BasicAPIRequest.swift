@@ -10,7 +10,9 @@ import UIKit
 
 class BasicAPIRequest: APIRequest {
 
-    var parser: APIParser = DefaultAPIParser()
+    var parser: APIParser {
+        return DefaultAPIParser()
+    }
     
     private var additionalParameters: [String: String] = [String: String]()
     
