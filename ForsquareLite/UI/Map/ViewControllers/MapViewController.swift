@@ -12,6 +12,9 @@ import AlamofireImage
 
 class MapViewController: UIViewController {
 
+    weak var router: MapViewControllerRouter?
+    var mapDataSource: MapDataSource!
+
     @IBOutlet weak var mapView: MKMapView!
     
     private var userTrackingButton: MKUserTrackingButton!
@@ -19,7 +22,6 @@ class MapViewController: UIViewController {
     
     private let locationManager = CLLocationManager()
 
-    var mapDataSource: MapDataSource!
     
     var loadWorkItem: DispatchWorkItem?
     
@@ -134,6 +136,14 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        guard let venue = (view.annotation as? RestaurantAnnotation)?.venue else {
+            return
+        }
+        self.router?.openDetailsForVenue(venue)
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is RestaurantAnnotation {

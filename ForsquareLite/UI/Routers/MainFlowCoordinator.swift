@@ -17,6 +17,10 @@ class MainFlowCoordinator: NSObject, FlowCoordinator {
         return window.rootViewController as? UINavigationController
     }
     
+    var mainStoryboard: UIStoryboard? {
+        return navigationController?.storyboard
+    }
+    
     var mapViewController: MapViewController? {
         return self.navigationController?.viewControllers.first as? MapViewController
     }
@@ -28,5 +32,20 @@ class MainFlowCoordinator: NSObject, FlowCoordinator {
     
     func start() {
         self.mapViewController?.mapDataSource = VenuesLoader(api: self.services.networkingService)
+        self.mapViewController?.router = self
+        self.mapViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+}
+
+extension MainFlowCoordinator: MapViewControllerRouter {
+    func openDetailsForVenue(_ venue: Venue) {
+        
+        guard let detailsViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? RestaurantDetailsViewController else {
+            return
+        }
+        
+        detailsViewController.venue = venue
+        
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }

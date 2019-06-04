@@ -44,6 +44,8 @@
 		44ABE36122A66FF80036AA05 /* MapCoordiante+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36022A66FF80036AA05 /* MapCoordiante+MapKit.swift */; };
 		44ABE36322A681A80036AA05 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABE36222A681A80036AA05 /* AlamofireImage.framework */; };
 		44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */; };
+		44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */; };
+		44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		44ABE36022A66FF80036AA05 /* MapCoordiante+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapCoordiante+MapKit.swift"; sourceTree = "<group>"; };
 		44ABE36222A681A80036AA05 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
+		44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
+		44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
+				44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -421,11 +427,13 @@
 				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
 				44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
+				44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */,
 				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
 				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
+				44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */,
 				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
