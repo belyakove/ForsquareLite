@@ -45,6 +45,7 @@ extension MainFlowCoordinator: MapViewControllerRouter {
         }
         
         detailsViewController.venue = venue
+        detailsViewController.api = self.services.networkingService
         
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }

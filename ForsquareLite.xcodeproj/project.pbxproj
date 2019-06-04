@@ -46,6 +46,7 @@
 		44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */; };
 		44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */; };
 		44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */; };
+		44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
 		44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRouter.swift; sourceTree = "<group>"; };
+		44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE33522A53F8E0036AA05 /* SearchRequest.swift */,
+				44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
 				44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */,
+				44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */,
 				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
 				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,

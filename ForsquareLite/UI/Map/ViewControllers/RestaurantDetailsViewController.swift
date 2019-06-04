@@ -11,6 +11,7 @@ import UIKit
 class RestaurantDetailsViewController: UIViewController {
 
     var venue: Venue!
+    var api: NetworkingService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +19,11 @@ class RestaurantDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = venue.name
+        
+        let request = DetailsRequest(venueID: self.venue.id)
+        self.api.executeRequest(request) { (result, error) in
+            print("result = \(result)")
+        }
+        
     }
 }
