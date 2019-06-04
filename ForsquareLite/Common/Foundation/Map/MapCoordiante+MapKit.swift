@@ -14,4 +14,8 @@ extension MapCoordinate {
         self.latitude = coordinate.latitude
         self.longitude = coordinate.longitude
     }
+    
+    var coreLocationCoordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
+    }
 }

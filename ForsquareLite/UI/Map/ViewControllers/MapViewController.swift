@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import AlamofireImage
 
 class MapViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class MapViewController: UIViewController {
     
     var loadWorkItem: DispatchWorkItem?
     
+    var currentAnnotations = Set<RestaurantAnnotation>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,9 @@ class MapViewController: UIViewController {
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+        
+        self.mapView.register(MKMarkerAnnotationView.self,
+                              forAnnotationViewWithReuseIdentifier: RestaurantAnnotation.ReuseID)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +84,6 @@ class MapViewController: UIViewController {
                 return
             }
             self.updateAnnotationsForVenues(venues)
-            
         })
     }
     
@@ -94,19 +99,25 @@ class MapViewController: UIViewController {
     }
     
     private func updateAnnotationsForVenues(_ venues: [Venue]) {
+        
+        var annotations = Set<RestaurantAnnotation>()
         for venue in venues {
-            let annotation = MKPointAnnotation()
-            annotation.title = venue.name
-            
-            let coordinate = CLLocationCoordinate2D(latitude: venue.coordinate.latitude,
-                                                    longitude: venue.coordinate.longitude)
-            
-            annotation.coordinate = coordinate
-            
-            self.mapView.addAnnotation(annotation)
+            let annotation = RestaurantAnnotation(venue: venue)
+            annotations.insert(annotation)
         }
+        
+        let before = self.currentAnnotations
+        let after = annotations
+        
+        let toKeep = before.intersection(after)
+        let toAdd = after.subtracting(toKeep)
+        let toRemove = before.subtracting(after)
+        
+        self.currentAnnotations = toKeep.union(toAdd)
+        
+        self.mapView.addAnnotations(Array(toAdd))
+        self.mapView.removeAnnotations(Array(toRemove))
     }
-    
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -117,6 +128,18 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: RestaurantAnnotation.ReuseID)
+        annotationView?.canShowCallout = true
+        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        
+        return annotationView
+    }
     
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         if let workItem = self.loadWorkItem {

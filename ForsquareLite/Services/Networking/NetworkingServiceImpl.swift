@@ -19,7 +19,6 @@ class NetworkingServiceImpl: NSObject, NetworkingService {
     
     init(configuration: URLSessionConfiguration, baseURL: URL) {
         self.sessionManager = Alamofire.SessionManager(configuration: configuration)
-        //self.sessionManager.ser
         self.baseURL = baseURL
         super.init()
     }
