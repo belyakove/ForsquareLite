@@ -63,13 +63,16 @@ class RestaurantDetailsViewController: UIViewController {
     }
     
     func displayViews(_ views: [UIView]) {
+        let existingSubviews = self.stackView.arrangedSubviews
+        for subview in existingSubviews {
+            self.stackView.removeArrangedSubview(subview)
+            subview.removeFromSuperview()
+        }
         for view in views {
             self.stackView.addArrangedSubview(view)
         }
     }
-    
 }
-
 
 extension RestaurantDetailsViewController: WebsiteViewDelegate {
     func websiteView(_ view: UIView, didRequestOpenURL url: URL) {
