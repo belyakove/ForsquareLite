@@ -13,11 +13,9 @@ class RatingView: UIView {
     @IBOutlet weak var label: UILabel!
     
     class func withRating(_ rating: Rating) -> RatingView {
-        let ratingView = Bundle(for: self).loadNibNamed("RatingView", owner: nil, options: nil)?.first as? RatingView
-        
-        ratingView?.rating = rating
-        
-        return ratingView ?? RatingView()
+        let ratingView: RatingView = RatingView.viewFromNib()
+        ratingView.rating = rating
+        return ratingView
     }
     
     var rating: Rating? {

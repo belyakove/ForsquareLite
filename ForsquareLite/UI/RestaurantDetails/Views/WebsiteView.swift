@@ -21,12 +21,10 @@ class WebsiteView: UIView {
     var url: URL?
     
     class func withURL(_ url: URL, delegate: WebsiteViewDelegate? = nil) -> WebsiteView {
-        let websiteView = Bundle(for: self).loadNibNamed("WebsiteView", owner: nil, options: nil)?.first as? WebsiteView
-        
-        websiteView?.url = url
-        websiteView?.delegate = delegate
-        
-        return websiteView ?? WebsiteView()
+        let websiteView: WebsiteView = WebsiteView.viewFromNib()
+        websiteView.url = url
+        websiteView.delegate = delegate
+        return websiteView
     }
     
     @IBAction func openWebsite() {

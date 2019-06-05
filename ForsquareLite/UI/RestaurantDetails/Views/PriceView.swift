@@ -14,10 +14,9 @@ class PriceView: UIView {
     @IBOutlet weak var priceDescriptionLabel: UILabel!
 
     class func withPrice(_ price: Price) -> PriceView {
-        let priceView = Bundle(for: self).loadNibNamed("PriceView", owner: nil, options: nil)?.first as? PriceView
-        
-        priceView?.price = price
-        return priceView ?? PriceView()
+        let priceView: PriceView = PriceView.viewFromNib()
+        priceView.price = price
+        return priceView
     }
 
     var price: Price? {
