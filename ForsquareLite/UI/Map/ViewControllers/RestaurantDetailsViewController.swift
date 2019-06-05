@@ -12,6 +12,7 @@ class RestaurantDetailsViewController: UIViewController {
 
     var venue: Venue!
     var api: NetworkingService!
+    weak var router: RestaurantDetailsRouter?
     
     @IBOutlet weak var stackView: UIStackView!
     override func viewDidLoad() {
@@ -51,6 +52,11 @@ class RestaurantDetailsViewController: UIViewController {
             views.append(PriceView.withPrice(price))
         }
         
+        if let url = details?.url {
+            let websiteView = WebsiteView.withURL(url, delegate: self)
+            views.append(websiteView)
+        }
+        
         self.displayViews(views)
     }
     
@@ -60,4 +66,11 @@ class RestaurantDetailsViewController: UIViewController {
         }
     }
     
+}
+
+
+extension RestaurantDetailsViewController: WebsiteViewDelegate {
+    func websiteView(_ view: UIView, didRequestOpenURL url: URL) {
+        self.router?.openURL(url)
+    }
 }

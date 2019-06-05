@@ -56,6 +56,9 @@
 		44ABE37B22A720930036AA05 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE37A22A720930036AA05 /* RatingView.xib */; };
 		44ABE37D22A72EF70036AA05 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE37C22A72EF70036AA05 /* PriceView.swift */; };
 		44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABE37E22A72EFF0036AA05 /* PriceView.xib */; };
+		44BEDFD822A7E61D007C1105 /* WebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFD722A7E61D007C1105 /* WebsiteView.swift */; };
+		44BEDFDA22A7E62A007C1105 /* WebsiteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BEDFD922A7E62A007C1105 /* WebsiteView.xib */; };
+		44BEDFDC22A7EFC1007C1105 /* RestaurantDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		44ABE37A22A720930036AA05 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		44ABE37C22A72EF70036AA05 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		44ABE37E22A72EFF0036AA05 /* PriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceView.xib; sourceTree = "<group>"; };
+		44BEDFD722A7E61D007C1105 /* WebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteView.swift; sourceTree = "<group>"; };
+		44BEDFD922A7E62A007C1105 /* WebsiteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteView.xib; sourceTree = "<group>"; };
+		44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +250,8 @@
 				44ABE37A22A720930036AA05 /* RatingView.xib */,
 				44ABE37C22A72EF70036AA05 /* PriceView.swift */,
 				44ABE37E22A72EFF0036AA05 /* PriceView.xib */,
+				44BEDFD722A7E61D007C1105 /* WebsiteView.swift */,
+				44BEDFD922A7E62A007C1105 /* WebsiteView.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 			children = (
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
 				44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */,
+				44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -421,6 +430,7 @@
 				44ABE37B22A720930036AA05 /* RatingView.xib in Resources */,
 				44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */,
 				445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */,
+				44BEDFDA22A7E62A007C1105 /* WebsiteView.xib in Resources */,
 				44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */,
 				445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */,
 			);
@@ -480,6 +490,7 @@
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
 				44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */,
 				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
+				44BEDFD822A7E61D007C1105 /* WebsiteView.swift in Sources */,
 				44ABE37522A714F10036AA05 /* Price.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
@@ -496,6 +507,7 @@
 				44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */,
 				44ABE37322A714080036AA05 /* Rating.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
+				44BEDFDC22A7EFC1007C1105 /* RestaurantDetailsRouter.swift in Sources */,
 				44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
 				44ABE35722A662790036AA05 /* FlowCoordinator.swift in Sources */,

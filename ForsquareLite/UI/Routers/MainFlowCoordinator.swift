@@ -46,7 +46,14 @@ extension MainFlowCoordinator: MapViewControllerRouter {
         
         detailsViewController.venue = venue
         detailsViewController.api = self.services.networkingService
+        detailsViewController.router = self
         
         self.navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+}
+
+extension MainFlowCoordinator: RestaurantDetailsRouter {
+    func openURL(_ url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
