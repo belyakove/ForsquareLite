@@ -235,25 +235,11 @@
 		44ABE33122A538740036AA05 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				44BEDFDD22A7F19D007C1105 /* RestaurantDetails */,
 				44ABE35922A662AA0036AA05 /* Routers */,
 				44ABE35822A662920036AA05 /* Map */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		44ABE33222A538810036AA05 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
-				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
-				44ABE37822A720100036AA05 /* RatingView.swift */,
-				44ABE37A22A720930036AA05 /* RatingView.xib */,
-				44ABE37C22A72EF70036AA05 /* PriceView.swift */,
-				44ABE37E22A72EFF0036AA05 /* PriceView.xib */,
-				44BEDFD722A7E61D007C1105 /* WebsiteView.swift */,
-				44BEDFD922A7E62A007C1105 /* WebsiteView.xib */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		44ABE33322A53F680036AA05 /* Requests */ = {
@@ -324,8 +310,8 @@
 		44ABE35822A662920036AA05 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
 				44ABE36422A682350036AA05 /* Annotations */,
-				44ABE33222A538810036AA05 /* ViewControllers */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -365,6 +351,28 @@
 				44ABE37422A714F10036AA05 /* Price.swift */,
 			);
 			path = VenueDetails;
+			sourceTree = "<group>";
+		};
+		44BEDFDD22A7F19D007C1105 /* RestaurantDetails */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
+				44BEDFDF22A7F1BD007C1105 /* Views */,
+			);
+			path = RestaurantDetails;
+			sourceTree = "<group>";
+		};
+		44BEDFDF22A7F1BD007C1105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44ABE37822A720100036AA05 /* RatingView.swift */,
+				44ABE37A22A720930036AA05 /* RatingView.xib */,
+				44ABE37C22A72EF70036AA05 /* PriceView.swift */,
+				44ABE37E22A72EFF0036AA05 /* PriceView.xib */,
+				44BEDFD722A7E61D007C1105 /* WebsiteView.swift */,
+				44BEDFD922A7E62A007C1105 /* WebsiteView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
