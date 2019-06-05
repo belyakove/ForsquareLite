@@ -29,7 +29,8 @@ class MapPresenterImpl: NSObject, MapPresenter {
 }
 
 extension MapPresenterImpl: MapInteractorObserver {
-    func interactor(_ intercator: MapInteractorImpl, didUpdateState state: MapInteractorState) {
+    
+    func interactor(_ intercator: MapInteractor, didUpdateState state: MapInteractorState) {
         
         let venueViewModels = state.venues.map { (venue) -> VenueViewModel in
             return VenueViewModel(id: venue.id,

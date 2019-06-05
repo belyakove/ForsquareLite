@@ -8,37 +8,28 @@
 
 import UIKit
 
-class RestaurantDetailsViewController: UIViewController {
+class RestaurantDetailsViewController: UIViewController, RestaurantDetailsView {
+    
+    var presenter: RestaurantDetailsPresenter?
 
-    var venue: Venue!
-    var api: NetworkingService!
-    weak var router: RestaurantDetailsRouter?
+    var viewModel: RestaurantDetailsViewModel? {
+        didSet {
+            self.updateView()
+        }
+    }
     
     @IBOutlet weak var stackView: UIStackView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = venue.name
-        
-        let request = DetailsRequest(venueID: self.venue.id)
-        self.api.executeRequest(request) { (result, error) in
-           
-            guard let details = result as? VenueDetails else {
-                return
-            }
-            self.details = details
-        }
+        self.presenter?.viewWillAppear(self)
     }
     
-    var details: VenueDetails? {
-        didSet {
-            self.showDetails(self.details)
-        }
+    func updateView() {
+        self.navigationItem.title = viewModel?.name
+        self.showDetails(viewModel)
     }
     
-    func showDetails(_ details: VenueDetails?) {
+    func showDetails(_ details: RestaurantDetailsViewModel?) {
     
         var views = [UIView]()
         
@@ -54,8 +45,8 @@ class RestaurantDetailsViewController: UIViewController {
             views.append(PriceView.withPrice(price))
         }
         
-        if let url = details?.url {
-            let websiteView = WebsiteView.withURL(url, delegate: self)
+        if details?.websiteAvailable == true {
+            let websiteView = WebsiteView.with(delegate: self)
             views.append(websiteView)
         }
         
@@ -75,7 +66,7 @@ class RestaurantDetailsViewController: UIViewController {
 }
 
 extension RestaurantDetailsViewController: WebsiteViewDelegate {
-    func websiteView(_ view: UIView, didRequestOpenURL url: URL) {
-        self.router?.openURL(url)
+    func websiteViewDidRequestOpenURL(_ view: UIView) {
+        self.presenter?.viewDidRequestToOpenWebsite(self)
     }
 }

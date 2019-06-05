@@ -12,13 +12,13 @@ class RatingView: UIView {
 
     @IBOutlet weak var label: UILabel!
     
-    class func withRating(_ rating: Rating) -> RatingView {
+    class func withRating(_ rating: RatingViewModel) -> RatingView {
         let ratingView: RatingView = RatingView.viewFromNib()
         ratingView.rating = rating
         return ratingView
     }
     
-    var rating: Rating? {
+    var rating: RatingViewModel? {
         didSet {
             
             if let rating = self.rating {

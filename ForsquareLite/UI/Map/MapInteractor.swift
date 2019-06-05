@@ -16,5 +16,5 @@ protocol MapInteractor {
 }
 
 protocol MapInteractorObserver: class {
-    func interactor(_ intercator: MapInteractorImpl, didUpdateState state: MapInteractorState)
+    func interactor(_ intercator: MapInteractor, didUpdateState state: MapInteractorState)
 }

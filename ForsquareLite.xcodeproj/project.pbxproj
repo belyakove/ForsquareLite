@@ -72,6 +72,16 @@
 		44BEDFF722A81F28007C1105 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF622A81F28007C1105 /* MapInteractor.swift */; };
 		44BEDFF922A81FC0007C1105 /* MapPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */; };
 		44BEDFFB22A8296E007C1105 /* AnnotationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFFA22A8296E007C1105 /* AnnotationsHelper.swift */; };
+		44BEDFFD22A82CD3007C1105 /* RestaurantDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFFC22A82CD3007C1105 /* RestaurantDetailsView.swift */; };
+		44BEDFFF22A82CE1007C1105 /* RestaurantDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFFE22A82CE1007C1105 /* RestaurantDetailsPresenter.swift */; };
+		44BEE00122A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00022A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift */; };
+		44BEE00322A82D1D007C1105 /* RestaurantDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00222A82D1D007C1105 /* RestaurantDetailsInteractor.swift */; };
+		44BEE00522A82D2C007C1105 /* RestaurantDetailsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00422A82D2C007C1105 /* RestaurantDetailsInteractorImpl.swift */; };
+		44BEE00822A82D5C007C1105 /* RestaurantDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00722A82D5C007C1105 /* RestaurantDetailsViewModel.swift */; };
+		44BEE00A22A82DCB007C1105 /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00922A82DCB007C1105 /* RatingViewModel.swift */; };
+		44BEE00C22A82DDB007C1105 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00B22A82DDB007C1105 /* PriceViewModel.swift */; };
+		44BEE01222A82F0F007C1105 /* RestaurantDetailsInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */; };
+		44BEE01422A82F83007C1105 /* RestaurantDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +152,16 @@
 		44BEDFF622A81F28007C1105 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterImpl.swift; sourceTree = "<group>"; };
 		44BEDFFA22A8296E007C1105 /* AnnotationsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationsHelper.swift; sourceTree = "<group>"; };
+		44BEDFFC22A82CD3007C1105 /* RestaurantDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsView.swift; sourceTree = "<group>"; };
+		44BEDFFE22A82CE1007C1105 /* RestaurantDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsPresenter.swift; sourceTree = "<group>"; };
+		44BEE00022A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsPresenterImpl.swift; sourceTree = "<group>"; };
+		44BEE00222A82D1D007C1105 /* RestaurantDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsInteractor.swift; sourceTree = "<group>"; };
+		44BEE00422A82D2C007C1105 /* RestaurantDetailsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsInteractorImpl.swift; sourceTree = "<group>"; };
+		44BEE00722A82D5C007C1105 /* RestaurantDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewModel.swift; sourceTree = "<group>"; };
+		44BEE00922A82DCB007C1105 /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
+		44BEE00B22A82DDB007C1105 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
+		44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsInteractorState.swift; sourceTree = "<group>"; };
+		44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,9 +281,9 @@
 		44ABE33122A538740036AA05 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				44BEDFDD22A7F19D007C1105 /* RestaurantDetails */,
 				44ABE35922A662AA0036AA05 /* Routers */,
 				44ABE35822A662920036AA05 /* Map */,
+				44BEDFDD22A7F19D007C1105 /* RestaurantDetails */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -336,8 +356,8 @@
 		44ABE35822A662920036AA05 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				44ABE36922A6AB590036AA05 /* MapRouter.swift */,
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+				44ABE36922A6AB590036AA05 /* MapRouter.swift */,
 				44BEDFE822A813A2007C1105 /* MapView.swift */,
 				44BEDFEA22A8148C007C1105 /* MapPresenter.swift */,
 				44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */,
@@ -394,6 +414,14 @@
 			isa = PBXGroup;
 			children = (
 				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
+				44BEDFFC22A82CD3007C1105 /* RestaurantDetailsView.swift */,
+				44BEDFFE22A82CE1007C1105 /* RestaurantDetailsPresenter.swift */,
+				44BEE00022A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift */,
+				44BEE00222A82D1D007C1105 /* RestaurantDetailsInteractor.swift */,
+				44BEE00422A82D2C007C1105 /* RestaurantDetailsInteractorImpl.swift */,
+				44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */,
+				44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */,
+				44BEE00622A82D40007C1105 /* ViewModels */,
 				44BEDFDF22A7F1BD007C1105 /* Views */,
 			);
 			path = RestaurantDetails;
@@ -412,6 +440,16 @@
 				44BEDFE422A7F750007C1105 /* PhotoView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		44BEE00622A82D40007C1105 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				44BEE00722A82D5C007C1105 /* RestaurantDetailsViewModel.swift */,
+				44BEE00922A82DCB007C1105 /* RatingViewModel.swift */,
+				44BEE00B22A82DDB007C1105 /* PriceViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,35 +560,43 @@
 				44BEDFE322A7F68F007C1105 /* PhotoView.swift in Sources */,
 				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
 				44ABE37922A720100036AA05 /* RatingView.swift in Sources */,
+				44BEE00122A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift in Sources */,
 				44BEDFFB22A8296E007C1105 /* AnnotationsHelper.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
 				44BEDFE922A813A2007C1105 /* MapView.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
+				44BEE00C22A82DDB007C1105 /* PriceViewModel.swift in Sources */,
 				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
 				44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */,
 				44BEDFF122A81682007C1105 /* MapInteractorImpl.swift in Sources */,
 				44ABE37722A71AC50036AA05 /* UIColor+Hex.swift in Sources */,
+				44BEDFFD22A82CD3007C1105 /* RestaurantDetailsView.swift in Sources */,
+				44BEE01222A82F0F007C1105 /* RestaurantDetailsInteractorState.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
 				44ABE36A22A6AB590036AA05 /* MapRouter.swift in Sources */,
 				44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */,
 				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
 				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
+				44BEE00822A82D5C007C1105 /* RestaurantDetailsViewModel.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
+				44BEE01422A82F83007C1105 /* RestaurantDetailsRepository.swift in Sources */,
 				44BEDFF522A81993007C1105 /* VenuesRepository.swift in Sources */,
 				44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */,
 				44BEDFED22A814A0007C1105 /* MapViewModel.swift in Sources */,
 				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
 				44BEDFD822A7E61D007C1105 /* WebsiteView.swift in Sources */,
 				44BEDFF722A81F28007C1105 /* MapInteractor.swift in Sources */,
+				44BEE00522A82D2C007C1105 /* RestaurantDetailsInteractorImpl.swift in Sources */,
 				44ABE37522A714F10036AA05 /* Price.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
 				44ABE36122A66FF80036AA05 /* MapCoordiante+MapKit.swift in Sources */,
 				44ABE37022A713BC0036AA05 /* VenueDetails.swift in Sources */,
+				44BEE00322A82D1D007C1105 /* RestaurantDetailsInteractor.swift in Sources */,
 				44ABE32D22A5374C0036AA05 /* Environment.swift in Sources */,
 				44ABE34722A553930036AA05 /* APIRequestInterceptor.swift in Sources */,
 				44ABE34F22A5C41A0036AA05 /* Venue.swift in Sources */,
@@ -568,7 +614,9 @@
 				44BEDFE122A7F65B007C1105 /* UIView+Nib.swift in Sources */,
 				44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */,
 				44BEDFEF22A814DD007C1105 /* VenueViewModel.swift in Sources */,
+				44BEDFFF22A82CE1007C1105 /* RestaurantDetailsPresenter.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
+				44BEE00A22A82DCB007C1105 /* RatingViewModel.swift in Sources */,
 				44ABE35722A662790036AA05 /* FlowCoordinator.swift in Sources */,
 				44BEDFF322A8183B007C1105 /* MapInteractorState.swift in Sources */,
 			);

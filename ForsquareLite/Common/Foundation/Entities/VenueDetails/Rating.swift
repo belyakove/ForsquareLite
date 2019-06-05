@@ -10,5 +10,5 @@ import UIKit
 
 struct Rating {
     let rating: String
-    let ratingColor: UIColor?
+    let ratingColor: String?
 }

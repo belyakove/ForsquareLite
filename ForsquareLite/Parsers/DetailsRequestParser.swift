@@ -80,12 +80,10 @@ class DetailsRequestParser: APIParser {
             return nil
         }
         
-        var color: UIColor?
-        if let ratingColorString = jsonObject[Keys.ratingColor] as? String {
-            color = UIColor(hexString: ratingColorString)
-        }
+        let ratingColorString = jsonObject[Keys.ratingColor] as? String
         
-        return Rating(rating: String(format: "%.1f", rating), ratingColor: color)
+        return Rating(rating: String(format: "%.1f", rating),
+                      ratingColor: ratingColorString)
     }
     
     func parsePhoto(jsonObject: [String: Any]) -> URL? {

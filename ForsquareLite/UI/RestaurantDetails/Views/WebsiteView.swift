@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WebsiteViewDelegate: class {
-    func websiteView(_ view: UIView, didRequestOpenURL url: URL)
+    func websiteViewDidRequestOpenURL(_ view: UIView)
 }
 
 class WebsiteView: UIView {
@@ -18,19 +18,14 @@ class WebsiteView: UIView {
     
     @IBOutlet weak var button: UIButton!
     
-    var url: URL?
-    
-    class func withURL(_ url: URL, delegate: WebsiteViewDelegate? = nil) -> WebsiteView {
+    class func with(delegate: WebsiteViewDelegate? = nil) -> WebsiteView {
         let websiteView: WebsiteView = WebsiteView.viewFromNib()
-        websiteView.url = url
         websiteView.delegate = delegate
         return websiteView
     }
     
     @IBAction func openWebsite() {
-        if let url = self.url {
-            self.delegate?.websiteView(self, didRequestOpenURL: url)
-        }
+        self.delegate?.websiteViewDidRequestOpenURL(self)
     }
     
     override func awakeFromNib() {

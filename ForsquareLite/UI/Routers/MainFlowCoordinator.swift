@@ -52,11 +52,15 @@ extension MainFlowCoordinator: MapRouter {
         guard let detailsViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? RestaurantDetailsViewController else {
             return
         }
-        
-        detailsViewController.venue = venue
-        detailsViewController.api = self.services.networkingService
-        detailsViewController.router = self
-        
+
+        let repository = RestaurantDetailsRepository(venue: venue)
+        let detailsInteractor = RestaurantDetailsInteractorImpl(api: self.services.networkingService,
+                                                                repository: repository,
+                                                                router: self)
+        let detailsPresenter = RestaurantDetailsPresenterImpl(interactor: detailsInteractor)
+        detailsPresenter.view = detailsViewController
+        detailsViewController.presenter = detailsPresenter
+
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }
