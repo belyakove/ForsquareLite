@@ -336,6 +336,7 @@
 		44ABE35822A662920036AA05 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				44ABE36922A6AB590036AA05 /* MapRouter.swift */,
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
 				44BEDFE822A813A2007C1105 /* MapView.swift */,
 				44BEDFEA22A8148C007C1105 /* MapPresenter.swift */,
@@ -355,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
-				44ABE36922A6AB590036AA05 /* MapRouter.swift */,
 				44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */,
 			);
 			path = Routers;
