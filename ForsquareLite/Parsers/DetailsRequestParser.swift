@@ -21,6 +21,9 @@ class DetailsRequestParser: APIParser {
         static let url = "canonicalUrl"
         static let rating = "rating"
         static let ratingColor = "ratingColor"
+        static let bestPhoto = "bestPhoto"
+        static let prefix = "prefix"
+        static let suffix = "suffix"
     }
 
     func parse(jsonObject: [String : Any]) -> Any? {
@@ -44,9 +47,15 @@ class DetailsRequestParser: APIParser {
         
         let rating = self.parseRating(jsonObject: venueJsonObject)
         
+        var photoURL: URL?
+        if let bestPhotoJsonObject = venueJsonObject[Keys.bestPhoto] as? [String: Any] {
+            photoURL = self.parsePhoto(jsonObject: bestPhotoJsonObject)
+        }
+        
         return VenueDetails(rating: rating,
                             url: url,
-                            price: price)
+                            price: price,
+                            photoURL: photoURL)
     }
     
     func parsePrice(jsonObject: [String: Any]) -> Price? {
@@ -77,5 +86,18 @@ class DetailsRequestParser: APIParser {
         }
         
         return Rating(rating: String(format: "%.1f", rating), ratingColor: color)
+    }
+    
+    func parsePhoto(jsonObject: [String: Any]) -> URL? {
+        
+        guard let prefix = jsonObject[Keys.prefix] as? String else {
+            return nil
+        }
+        guard let suffix = jsonObject[Keys.suffix] as? String else {
+            return nil
+        }
+        
+        return URL(string: "\(prefix)original\(suffix)")
+
     }
 }

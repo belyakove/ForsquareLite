@@ -59,6 +59,9 @@
 		44BEDFD822A7E61D007C1105 /* WebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFD722A7E61D007C1105 /* WebsiteView.swift */; };
 		44BEDFDA22A7E62A007C1105 /* WebsiteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BEDFD922A7E62A007C1105 /* WebsiteView.xib */; };
 		44BEDFDC22A7EFC1007C1105 /* RestaurantDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */; };
+		44BEDFE122A7F65B007C1105 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFE022A7F65B007C1105 /* UIView+Nib.swift */; };
+		44BEDFE322A7F68F007C1105 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFE222A7F68F007C1105 /* PhotoView.swift */; };
+		44BEDFE522A7F750007C1105 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BEDFE422A7F750007C1105 /* PhotoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +119,9 @@
 		44BEDFD722A7E61D007C1105 /* WebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteView.swift; sourceTree = "<group>"; };
 		44BEDFD922A7E62A007C1105 /* WebsiteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteView.xib; sourceTree = "<group>"; };
 		44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsRouter.swift; sourceTree = "<group>"; };
+		44BEDFE022A7F65B007C1105 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		44BEDFE222A7F68F007C1105 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		44BEDFE422A7F750007C1105 /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +337,7 @@
 			children = (
 				44ABE35E22A66D230036AA05 /* MKMapView+Utilities.swift */,
 				44ABE37622A71AC50036AA05 /* UIColor+Hex.swift */,
+				44BEDFE022A7F65B007C1105 /* UIView+Nib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,6 +378,8 @@
 				44ABE37E22A72EFF0036AA05 /* PriceView.xib */,
 				44BEDFD722A7E61D007C1105 /* WebsiteView.swift */,
 				44BEDFD922A7E62A007C1105 /* WebsiteView.xib */,
+				44BEDFE222A7F68F007C1105 /* PhotoView.swift */,
+				44BEDFE422A7F750007C1105 /* PhotoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +446,7 @@
 				445F5D3022A52FB900178CC7 /* LaunchScreen.storyboard in Resources */,
 				44ABE37B22A720930036AA05 /* RatingView.xib in Resources */,
 				44ABE32E22A5374C0036AA05 /* Configuration.plist in Resources */,
+				44BEDFE522A7F750007C1105 /* PhotoView.xib in Resources */,
 				445F5D2D22A52FB900178CC7 /* Assets.xcassets in Resources */,
 				44BEDFDA22A7E62A007C1105 /* WebsiteView.xib in Resources */,
 				44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */,
@@ -479,6 +489,7 @@
 				44ABE36E22A7107F0036AA05 /* DetailsRequestParser.swift in Sources */,
 				44ABE32922A536600036AA05 /* Cancellable.swift in Sources */,
 				44ABE37D22A72EF70036AA05 /* PriceView.swift in Sources */,
+				44BEDFE322A7F68F007C1105 /* PhotoView.swift in Sources */,
 				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
 				44ABE37922A720100036AA05 /* RatingView.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
@@ -516,6 +527,7 @@
 				44ABE37322A714080036AA05 /* Rating.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
 				44BEDFDC22A7EFC1007C1105 /* RestaurantDetailsRouter.swift in Sources */,
+				44BEDFE122A7F65B007C1105 /* UIView+Nib.swift in Sources */,
 				44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
 				44ABE35722A662790036AA05 /* FlowCoordinator.swift in Sources */,

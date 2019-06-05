@@ -28,10 +28,8 @@ class RestaurantDetailsViewController: UIViewController {
             guard let details = result as? VenueDetails else {
                 return
             }
-            
             self.details = details
         }
-        
     }
     
     var details: VenueDetails? {
@@ -44,6 +42,10 @@ class RestaurantDetailsViewController: UIViewController {
     
         var views = [UIView]()
         
+        if let photoURL = details?.photoURL {
+            views.append(PhotoView.withPhotoURL(photoURL))
+        }
+
         if let rating = details?.rating {
             views.append(RatingView.withRating(rating))
         }

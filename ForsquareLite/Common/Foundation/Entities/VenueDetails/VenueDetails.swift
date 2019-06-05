@@ -12,4 +12,5 @@ struct VenueDetails {
     let rating: Rating?
     let url: URL?
     let price: Price?
+    let photoURL: URL?
 }
