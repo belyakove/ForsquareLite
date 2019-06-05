@@ -71,6 +71,7 @@
 		44BEDFF522A81993007C1105 /* VenuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF422A81993007C1105 /* VenuesRepository.swift */; };
 		44BEDFF722A81F28007C1105 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF622A81F28007C1105 /* MapInteractor.swift */; };
 		44BEDFF922A81FC0007C1105 /* MapPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */; };
+		44BEDFFB22A8296E007C1105 /* AnnotationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFFA22A8296E007C1105 /* AnnotationsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		44BEDFF422A81993007C1105 /* VenuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRepository.swift; sourceTree = "<group>"; };
 		44BEDFF622A81F28007C1105 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterImpl.swift; sourceTree = "<group>"; };
+		44BEDFFA22A8296E007C1105 /* AnnotationsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +374,7 @@
 		44ABE36422A682350036AA05 /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
+				44BEDFFA22A8296E007C1105 /* AnnotationsHelper.swift */,
 				44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */,
 			);
 			path = Annotations;
@@ -519,6 +522,7 @@
 				44BEDFE322A7F68F007C1105 /* PhotoView.swift in Sources */,
 				44ABE33B22A540610036AA05 /* MapCoordinateRect.swift in Sources */,
 				44ABE37922A720100036AA05 /* RatingView.swift in Sources */,
+				44BEDFFB22A8296E007C1105 /* AnnotationsHelper.swift in Sources */,
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,

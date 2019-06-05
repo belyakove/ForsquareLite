@@ -23,7 +23,7 @@ class MapViewController: UIViewController, MapView {
 
     var loadWorkItem: DispatchWorkItem?
     
-    var currentAnnotations = Set<RestaurantAnnotation>()
+    var annotationsHelper: AnnotationsHelper!
     
     var viewModel: MapViewModel? {
         didSet {
@@ -33,6 +33,10 @@ class MapViewController: UIViewController, MapView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Foursquare Lite"
+        
+        self.annotationsHelper = AnnotationsHelper(mapView: mapView)
         
         self.mapView.showsUserLocation = true
         self.mapView.setUserTrackingMode(.follow, animated: true)
@@ -48,8 +52,10 @@ class MapViewController: UIViewController, MapView {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        self.loadVenues(center: self.mapView.region.center, radius: self.mapView.visibleRadius)
+        let mapCoordinate = MapCoordinate(self.mapView.region.center)
+        self.presenter?.mapView(self,
+                                didUpdateCenter: mapCoordinate,
+                                radius: self.mapView.visibleRadius)
     }
 
     private func setupUserTrackingButtonAndScaleView() {
@@ -84,38 +90,12 @@ class MapViewController: UIViewController, MapView {
     }
     
     func updateView() {
-        
         guard let venueViewModels = self.viewModel?.venuesModels else {
             return
         }
-        
-        let annotations = self.annotations(forVenues: venueViewModels)
-        self.updateAnnotations(annotations)
+        self.annotationsHelper.updateMapAnnotationsForVenues(venueViewModels)
     }
     
-    private func annotations(forVenues venues: [VenueViewModel]) -> Set<RestaurantAnnotation> {
-        var annotations = Set<RestaurantAnnotation>()
-        for venue in venues {
-            let annotation = RestaurantAnnotation(venue: venue)
-            annotations.insert(annotation)
-        }
-        return annotations
-    }
-    
-    private func updateAnnotations(_ annotations:Set<RestaurantAnnotation>) {
-        
-        let before = self.currentAnnotations
-        let after = annotations
-        
-        let toKeep = before.intersection(after)
-        let toAdd = after.subtracting(toKeep)
-        let toRemove = before.subtracting(after)
-        
-        self.currentAnnotations = toKeep.union(toAdd)
-        
-        self.mapView.addAnnotations(Array(toAdd))
-        self.mapView.removeAnnotations(Array(toRemove))
-    }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
