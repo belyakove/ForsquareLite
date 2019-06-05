@@ -379,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
-				44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -417,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */,
+				44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */,
 				44BEDFFC22A82CD3007C1105 /* RestaurantDetailsView.swift */,
 				44BEDFFE22A82CE1007C1105 /* RestaurantDetailsPresenter.swift */,
 				44BEE00022A82D0B007C1105 /* RestaurantDetailsPresenterImpl.swift */,
