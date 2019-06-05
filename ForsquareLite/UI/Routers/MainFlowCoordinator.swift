@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol MainFlowCoordinatorDependencyProvider: class {
+    func createDetailsViewController(forVenue venue: Venue,
+                                     router: RestaurantDetailsRouter) -> UIViewController
+    @discardableResult func enrichMapViewController(_ viewController: MapViewController, router: MapRouter) -> UIViewController
+}
+
 class MainFlowCoordinator: NSObject, FlowCoordinator {
     
     let window: UIWindow
-    let services: ServicesProvider
+    let dependencyProvider: MainFlowCoordinatorDependencyProvider
     
     var navigationController: UINavigationController? {
         return window.rootViewController as? UINavigationController
@@ -21,46 +27,32 @@ class MainFlowCoordinator: NSObject, FlowCoordinator {
         return navigationController?.storyboard
     }
     
-    var mapViewController: MapViewController? {
-        return self.navigationController?.viewControllers.first as? MapViewController
+    var mapViewController: MapViewController {
+        
+        guard let mapViewController = self.navigationController?.viewControllers.first as? MapViewController else {
+            fatalError("Root view controller is not MapViewController")
+        }
+        return mapViewController
     }
     
-    init(window: UIWindow, services: ServicesProvider) {
+    init(window: UIWindow,
+         dependencyProvider: MainFlowCoordinatorDependencyProvider) {
         self.window = window
-        self.services = services
+        self.dependencyProvider = dependencyProvider
     }
     
     func start() {
         
-        let dataSource = VenuesLoader(api: self.services.networkingService)
-        let repository = VenuesRepository()
-        
-        let mapInteractor = MapInteractorImpl(dataSource: dataSource,
-                                              repository: repository,
-                                              router: self)
-        let mapPresenter = MapPresenterImpl(interactor: mapInteractor)
-        mapPresenter.view = self.mapViewController
-        mapViewController?.presenter = mapPresenter
-        
-        self.mapViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.dependencyProvider.enrichMapViewController(self.mapViewController, router: self)
     }
 }
 
 extension MainFlowCoordinator: MapRouter {
     func openDetailsForVenue(_ venue: Venue) {
         
-        guard let detailsViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? RestaurantDetailsViewController else {
-            return
-        }
-
-        let repository = RestaurantDetailsRepository(venue: venue)
-        let detailsInteractor = RestaurantDetailsInteractorImpl(api: self.services.networkingService,
-                                                                repository: repository,
-                                                                router: self)
-        let detailsPresenter = RestaurantDetailsPresenterImpl(interactor: detailsInteractor)
-        detailsPresenter.view = detailsViewController
-        detailsViewController.presenter = detailsPresenter
-
+        let detailsViewController = self.dependencyProvider.createDetailsViewController(forVenue: venue,
+                                                             router: self)
+        
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }

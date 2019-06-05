@@ -14,14 +14,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var services: ServicesProvider!
     var mainFlowCoordinator: MainFlowCoordinator?
+    var mainAssembly: MainAssembly!
 
+    var mainStoryboard: UIStoryboard {
+        guard let storyboard = self.window?.rootViewController?.storyboard else {
+            fatalError("No main storyboard present")
+        }
+        return storyboard
+    }
+    
+    var mainWindow: UIWindow {
+        guard let window = self.window else {
+            fatalError("No main window present")
+        }
+        return window
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let environment = Environment(.production)
         self.services = ServicesBuilder.buildServices(environment: environment)
         
-        self.mainFlowCoordinator = MainFlowCoordinator(window: self.window ?? UIWindow(),
-                                                       services: self.services)
+        self.mainAssembly = MainAssembly(storyboard: self.mainStoryboard,
+                                         servicesProvider: self.services)
+        
+        self.mainFlowCoordinator = MainFlowCoordinator(window: self.mainWindow,
+                                                       dependencyProvider: self.mainAssembly)
         self.mainFlowCoordinator?.start()
         
         return true

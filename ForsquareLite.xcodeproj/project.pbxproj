@@ -82,6 +82,7 @@
 		44BEE00C22A82DDB007C1105 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE00B22A82DDB007C1105 /* PriceViewModel.swift */; };
 		44BEE01222A82F0F007C1105 /* RestaurantDetailsInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */; };
 		44BEE01422A82F83007C1105 /* RestaurantDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */; };
+		44BEE01622A83F77007C1105 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01522A83F77007C1105 /* MainAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,7 @@
 		44BEE00B22A82DDB007C1105 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
 		44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsInteractorState.swift; sourceTree = "<group>"; };
 		44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsRepository.swift; sourceTree = "<group>"; };
+		44BEE01522A83F77007C1105 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 		44ABE33122A538740036AA05 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				44BEE01522A83F77007C1105 /* MainAssembly.swift */,
 				44ABE35922A662AA0036AA05 /* Routers */,
 				44ABE35822A662920036AA05 /* Map */,
 				44BEDFDD22A7F19D007C1105 /* RestaurantDetails */,
@@ -576,6 +579,7 @@
 				44BEE01222A82F0F007C1105 /* RestaurantDetailsInteractorState.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
 				44ABE36A22A6AB590036AA05 /* MapRouter.swift in Sources */,
+				44BEE01622A83F77007C1105 /* MainAssembly.swift in Sources */,
 				44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */,
 				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
 				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
