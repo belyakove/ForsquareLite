@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442B48DE22A877A400707F76 /* RepositoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B48DD22A877A400707F76 /* RepositoriesTest.swift */; };
+		442B48E022A87B7100707F76 /* InterceptorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B48DF22A87B7100707F76 /* InterceptorTest.swift */; };
+		442B48E222A87D1600707F76 /* MapInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B48E122A87D1600707F76 /* MapInteractorTest.swift */; };
 		445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F5D2322A52FB300178CC7 /* AppDelegate.swift */; };
 		445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445F5D2522A52FB300178CC7 /* MapViewController.swift */; };
 		445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445F5D2922A52FB300178CC7 /* Main.storyboard */; };
@@ -83,9 +86,26 @@
 		44BEE01222A82F0F007C1105 /* RestaurantDetailsInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */; };
 		44BEE01422A82F83007C1105 /* RestaurantDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */; };
 		44BEE01622A83F77007C1105 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE01522A83F77007C1105 /* MainAssembly.swift */; };
+		44BEE05222A87162007C1105 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE05122A87162007C1105 /* ParserTests.swift */; };
+		44BEE05522A8721B007C1105 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 44BEE05322A8721B007C1105 /* search.json */; };
+		44BEE05622A8721B007C1105 /* details.json in Resources */ = {isa = PBXBuildFile; fileRef = 44BEE05422A8721B007C1105 /* details.json */; };
+		44BEE05C22A8762A007C1105 /* MockJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEE05B22A8762A007C1105 /* MockJson.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		44BEE02022A86AFA007C1105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 445F5D1822A52FB300178CC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 445F5D1F22A52FB300178CC7;
+			remoteInfo = ForsquareLite;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		442B48DD22A877A400707F76 /* RepositoriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTest.swift; sourceTree = "<group>"; };
+		442B48DF22A87B7100707F76 /* InterceptorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorTest.swift; sourceTree = "<group>"; };
+		442B48E122A87D1600707F76 /* MapInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTest.swift; sourceTree = "<group>"; };
 		445F5D2022A52FB300178CC7 /* ForsquareLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForsquareLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		445F5D2322A52FB300178CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		445F5D2522A52FB300178CC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +184,14 @@
 		44BEE01122A82F0F007C1105 /* RestaurantDetailsInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsInteractorState.swift; sourceTree = "<group>"; };
 		44BEE01322A82F83007C1105 /* RestaurantDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsRepository.swift; sourceTree = "<group>"; };
 		44BEE01522A83F77007C1105 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		44BEE01B22A86AFA007C1105 /* ForsquareLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForsquareLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44BEE01F22A86AFA007C1105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44BEE05122A87162007C1105 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		44BEE05322A8721B007C1105 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = search.json; path = ../../../Documents/search.json; sourceTree = "<group>"; };
+		44BEE05422A8721B007C1105 /* details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = details.json; path = ../../../Documents/details.json; sourceTree = "<group>"; };
+		44BEE05822A87226007C1105 /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		44BEE05922A87226007C1105 /* details.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = details.json; sourceTree = "<group>"; };
+		44BEE05B22A8762A007C1105 /* MockJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +204,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44BEE01822A86AFA007C1105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -183,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				445F5D2222A52FB300178CC7 /* ForsquareLite */,
+				44BEE01C22A86AFA007C1105 /* ForsquareLiteTests */,
 				445F5D2122A52FB300178CC7 /* Products */,
 				44ABE31322A532070036AA05 /* Frameworks */,
 			);
@@ -192,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				445F5D2022A52FB300178CC7 /* ForsquareLite.app */,
+				44BEE01B22A86AFA007C1105 /* ForsquareLiteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,6 +492,39 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		44BEE01C22A86AFA007C1105 /* ForsquareLiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				44BEE05A22A8761C007C1105 /* Mock */,
+				44BEE05722A87220007C1105 /* JSON */,
+				44BEE05122A87162007C1105 /* ParserTests.swift */,
+				442B48DD22A877A400707F76 /* RepositoriesTest.swift */,
+				442B48DF22A87B7100707F76 /* InterceptorTest.swift */,
+				442B48E122A87D1600707F76 /* MapInteractorTest.swift */,
+				44BEE05422A8721B007C1105 /* details.json */,
+				44BEE05322A8721B007C1105 /* search.json */,
+				44BEE01F22A86AFA007C1105 /* Info.plist */,
+			);
+			path = ForsquareLiteTests;
+			sourceTree = "<group>";
+		};
+		44BEE05722A87220007C1105 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				44BEE05922A87226007C1105 /* details.json */,
+				44BEE05822A87226007C1105 /* search.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		44BEE05A22A8761C007C1105 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				44BEE05B22A8762A007C1105 /* MockJson.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -476,6 +546,24 @@
 			productReference = 445F5D2022A52FB300178CC7 /* ForsquareLite.app */;
 			productType = "com.apple.product-type.application";
 		};
+		44BEE01A22A86AFA007C1105 /* ForsquareLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44BEE02222A86AFB007C1105 /* Build configuration list for PBXNativeTarget "ForsquareLiteTests" */;
+			buildPhases = (
+				44BEE01722A86AFA007C1105 /* Sources */,
+				44BEE01822A86AFA007C1105 /* Frameworks */,
+				44BEE01922A86AFA007C1105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44BEE02122A86AFA007C1105 /* PBXTargetDependency */,
+			);
+			name = ForsquareLiteTests;
+			productName = ForsquareLiteTests;
+			productReference = 44BEE01B22A86AFA007C1105 /* ForsquareLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -488,6 +576,10 @@
 				TargetAttributes = {
 					445F5D1F22A52FB300178CC7 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					44BEE01A22A86AFA007C1105 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 445F5D1F22A52FB300178CC7;
 					};
 				};
 			};
@@ -505,6 +597,7 @@
 			projectRoot = "";
 			targets = (
 				445F5D1F22A52FB300178CC7 /* ForsquareLite */,
+				44BEE01A22A86AFA007C1105 /* ForsquareLiteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -522,6 +615,15 @@
 				44BEDFDA22A7E62A007C1105 /* WebsiteView.xib in Resources */,
 				44ABE37F22A72EFF0036AA05 /* PriceView.xib in Resources */,
 				445F5D2B22A52FB300178CC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44BEE01922A86AFA007C1105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44BEE05622A8721B007C1105 /* details.json in Resources */,
+				44BEE05522A8721B007C1105 /* search.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,7 +728,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44BEE01722A86AFA007C1105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442B48E222A87D1600707F76 /* MapInteractorTest.swift in Sources */,
+				44BEE05C22A8762A007C1105 /* MockJson.swift in Sources */,
+				442B48DE22A877A400707F76 /* RepositoriesTest.swift in Sources */,
+				44BEE05222A87162007C1105 /* ParserTests.swift in Sources */,
+				442B48E022A87B7100707F76 /* InterceptorTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44BEE02122A86AFA007C1105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 445F5D1F22A52FB300178CC7 /* ForsquareLite */;
+			targetProxy = 44BEE02022A86AFA007C1105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		445F5D2922A52FB300178CC7 /* Main.storyboard */ = {
@@ -808,6 +930,46 @@
 			};
 			name = Release;
 		};
+		44BEE02322A86AFB007C1105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E2RL54QKRY;
+				INFOPLIST_FILE = ForsquareLiteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.ForsquareLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForsquareLite.app/ForsquareLite";
+			};
+			name = Debug;
+		};
+		44BEE02422A86AFB007C1105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E2RL54QKRY;
+				INFOPLIST_FILE = ForsquareLiteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Home.ForsquareLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForsquareLite.app/ForsquareLite";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -825,6 +987,15 @@
 			buildConfigurations = (
 				445F5D3522A52FB900178CC7 /* Debug */,
 				445F5D3622A52FB900178CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44BEE02222A86AFB007C1105 /* Build configuration list for PBXNativeTarget "ForsquareLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44BEE02322A86AFB007C1105 /* Debug */,
+				44BEE02422A86AFB007C1105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,1044 @@
+{  
+   "meta":{  
+      "code":200,
+      "requestId":"5cf5101a1ed21914bece59ab"
+   },
+   "response":{  
+      "venues":[  
+         {  
+            "id":"4daa132da86e771ea71bf3a1",
+            "name":"Kagerplein",
+            "location":{  
+               "lat":52.2220662145874,
+               "lng":4.530779223815061,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.2220662145874,
+                     "lng":4.530779223815061
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d164941735",
+                  "name":"Plaza",
+                  "pluralName":"Plazas",
+                  "shortName":"Plaza",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/plaza_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4c32f8c9ac0ab713939c1c1e",
+            "name":"Kaagbrug",
+            "location":{  
+               "address":"Rijksweg A44",
+               "crossStreet":"Ringvaart van de Haarlemmermeerpolder",
+               "lat":52.224224288993966,
+               "lng":4.552373886108398,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.224224288993966,
+                     "lng":4.552373886108398
+                  }
+               ],
+               "cc":"NL",
+               "city":"Buitenkaag",
+               "state":"North Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Rijksweg A44 (Ringvaart van de Haarlemmermeerpolder)",
+                  "Buitenkaag",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1df941735",
+                  "name":"Bridge",
+                  "pluralName":"Bridges",
+                  "shortName":"Bridge",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/bridge_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4bb783abcf2fc9b6e5509e02",
+            "name":"Jonkman & Zonen B.V.",
+            "location":{  
+               "address":"Jachthaven 1",
+               "lat":52.2204504870337,
+               "lng":4.543769812111497,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.2204504870337,
+                     "lng":4.543769812111497
+                  }
+               ],
+               "postalCode":"2172 JX",
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Jachthaven 1",
+                  "2172 JX Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1e0941735",
+                  "name":"Harbor / Marina",
+                  "pluralName":"Harbors / Marinas",
+                  "shortName":"Harbor / Marina",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/harbor_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e37e6b4483bda3eb11529ea",
+            "name":"Kinderstad",
+            "location":{  
+               "lat":52.221737012203086,
+               "lng":4.540020925002046,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.221737012203086,
+                     "lng":4.540020925002046
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d162941735",
+                  "name":"Other Great Outdoors",
+                  "pluralName":"Other Great Outdoors",
+                  "shortName":"Other Outdoors",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/outdoors_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"51692941e4b0fc9f2d4d3b8e",
+            "name":"Sassemervaart",
+            "location":{  
+               "lat":52.22078172308159,
+               "lng":4.543564481261952,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22078172308159,
+                     "lng":4.543564481261952
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d161941735",
+                  "name":"Lake",
+                  "pluralName":"Lakes",
+                  "shortName":"Lake",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e0c6443ae60909ff149da99",
+            "name":"Sassenheim Centrum",
+            "location":{  
+               "address":"Hoofdstraat",
+               "lat":52.226213445591846,
+               "lng":4.529904322089402,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.226213445591846,
+                     "lng":4.529904322089402
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Hoofdstraat",
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1fd941735",
+                  "name":"Shopping Mall",
+                  "pluralName":"Shopping Malls",
+                  "shortName":"Mall",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/mall_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4c138f2682a3c9b6e19afbf8",
+            "name":"W. Warnaarlaan",
+            "location":{  
+               "address":"Willem Warnaarlaan 33",
+               "lat":52.228415,
+               "lng":4.530838,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.228415,
+                     "lng":4.530838
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Willem Warnaarlaan 33",
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e5eb61c52b1425a37757fcf",
+            "name":"De Boompjes",
+            "location":{  
+               "address":"Essenlaan 30-32",
+               "crossStreet":"Platanenlaan",
+               "lat":52.221960279370826,
+               "lng":4.54056951428682,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.221960279370826,
+                     "lng":4.54056951428682
+                  }
+               ],
+               "postalCode":"2172 BW",
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Essenlaan 30-32 (Platanenlaan)",
+                  "2172 BW Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4d954b06a243a5684965b473",
+                  "name":"Residential Building (Apartment / Condo)",
+                  "pluralName":"Residential Buildings (Apartments / Condos)",
+                  "shortName":"Residential",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4be1c1f0ae55a59354745b62",
+            "name":"De Kaagsociëteit",
+            "location":{  
+               "lat":52.21892952919006,
+               "lng":4.546482,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.21892952919006,
+                     "lng":4.546482
+                  }
+               ],
+               "postalCode":"2172VV",
+               "cc":"NL",
+               "city":"Teylingen",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "2172VV Teylingen",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"51602306e4b0db8cd7a1b795",
+            "name":"Schiphollijn",
+            "location":{  
+               "lat":52.21706191414173,
+               "lng":4.526214985488396,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.21706191414173,
+                     "lng":4.526214985488396
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d162941735",
+                  "name":"Other Great Outdoors",
+                  "pluralName":"Other Great Outdoors",
+                  "shortName":"Other Outdoors",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/outdoors_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4cdaeba05aeda1cda8e5b911",
+            "name":"Arena",
+            "location":{  
+               "address":"Diamantstraat",
+               "lat":52.223355,
+               "lng":4.550411,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.223355,
+                     "lng":4.550411
+                  }
+               ],
+               "cc":"NL",
+               "city":"Alphen aan den Rijn",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Diamantstraat",
+                  "Alphen aan den Rijn",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d175941735",
+                  "name":"Gym / Fitness Center",
+                  "pluralName":"Gyms or Fitness Centers",
+                  "shortName":"Gym / Fitness",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/building/gym_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4da1a1902939b1f7e3b7f856",
+            "name":"Kagerplassen",
+            "location":{  
+               "lat":52.21591115665445,
+               "lng":4.548992110904921,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.21591115665445,
+                     "lng":4.548992110904921
+                  }
+               ],
+               "cc":"NL",
+               "city":"Kaag",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Kaag",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d161941735",
+                  "name":"Lake",
+                  "pluralName":"Lakes",
+                  "shortName":"Lake",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e4f93d4c65bb313ba876ece",
+            "name":"HEMA",
+            "location":{  
+               "lat":52.223023761929895,
+               "lng":4.549339939348212,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.223023761929895,
+                     "lng":4.549339939348212
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1f6941735",
+                  "name":"Department Store",
+                  "pluralName":"Department Stores",
+                  "shortName":"Department Store",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/departmentstore_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4db29d4aa86e58921bf9595f",
+            "name":"Manege Straver",
+            "location":{  
+               "lat":52.220601,
+               "lng":4.541006,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.220601,
+                     "lng":4.541006
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4db4148dfa8c350240dcc2ba",
+            "name":"Norremeer",
+            "location":{  
+               "lat":52.21250467625024,
+               "lng":4.543452541151528,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.21250467625024,
+                     "lng":4.543452541151528
+                  }
+               ],
+               "cc":"NL",
+               "city":"Kaag",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Kaag",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d161941735",
+                  "name":"Lake",
+                  "pluralName":"Lakes",
+                  "shortName":"Lake",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4b5f34ddf964a5203fad29e3",
+            "name":"Tjarda Sassenheim",
+            "location":{  
+               "address":"Kagerweide 30",
+               "lat":52.22261914197342,
+               "lng":4.536785759645744,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22261914197342,
+                     "lng":4.536785759645744
+                  }
+               ],
+               "postalCode":"2172 HT",
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Kagerweide 30",
+                  "2172 HT Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1e0941735",
+                  "name":"Harbor / Marina",
+                  "pluralName":"Harbors / Marinas",
+                  "shortName":"Harbor / Marina",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/harbor_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4d95553ca2c654812aaaa553",
+            "name":"A44 (3, Noordwijkerhout)",
+            "location":{  
+               "address":"Rijksweg A44",
+               "crossStreet":"N208",
+               "lat":52.22162655313485,
+               "lng":4.54347163438797,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22162655313485,
+                     "lng":4.54347163438797
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Rijksweg A44 (N208)",
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1f9931735",
+                  "name":"Road",
+                  "pluralName":"Roads",
+                  "shortName":"Road",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/highway_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4f4340d9e4b0f9c0eb68c263",
+            "name":"Sprinter almere oostvaarders - den haag cs",
+            "location":{  
+               "lat":52.21816237261638,
+               "lng":4.525708983475446,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.21816237261638,
+                     "lng":4.525708983475446
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1fc931735",
+                  "name":"Light Rail Station",
+                  "pluralName":"Light Rail Stations",
+                  "shortName":"Light Rail",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/lightrail_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e01b611d22db37fb028eb5a",
+            "name":"Kinderkorf",
+            "location":{  
+               "lat":52.219844507094656,
+               "lng":4.528938662973463,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.219844507094656,
+                     "lng":4.528938662973463
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d1e7941735",
+                  "name":"Playground",
+                  "pluralName":"Playgrounds",
+                  "shortName":"Playground",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/playground_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"50f28a86e4b050bf98733a8e",
+            "name":"Springstal Herruer",
+            "location":{  
+               "lat":52.22119483341385,
+               "lng":4.535507432633423,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22119483341385,
+                     "lng":4.535507432633423
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d15b941735",
+                  "name":"Farm",
+                  "pluralName":"Farms",
+                  "shortName":"Farm",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/farm_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4b925de0f964a520c2f433e3",
+            "name":"Esso station",
+            "location":{  
+               "address":"De poel",
+               "lat":52.221408301029165,
+               "lng":4.542952450601452,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.221408301029165,
+                     "lng":4.542952450601452
+                  }
+               ],
+               "cc":"NL",
+               "city":"Lisse",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "De poel",
+                  "Lisse",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d113951735",
+                  "name":"Gas Station",
+                  "pluralName":"Gas Stations",
+                  "shortName":"Gas Station",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/gas_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4f97f950e4b0367fa31cbb6b",
+            "name":"Bus 54 to Leiden CS",
+            "location":{  
+               "lat":52.22553105727198,
+               "lng":4.5338841168559725,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22553105727198,
+                     "lng":4.5338841168559725
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4d30bc19f986a0934969ff66",
+            "name":"Wouters Place",
+            "location":{  
+               "lat":52.224229,
+               "lng":4.530794,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.224229,
+                     "lng":4.530794
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4ce132ed825e721e45507a45",
+            "name":"Hooiberg",
+            "location":{  
+               "address":"industriekade 46",
+               "lat":52.22221163273378,
+               "lng":4.5387957801327765,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22221163273378,
+                     "lng":4.5387957801327765
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "industriekade 46",
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4c590c1967ac0f47106b034c",
+            "name":"Guilbert coiffures",
+            "location":{  
+               "lat":52.230587,
+               "lng":4.543366,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.230587,
+                     "lng":4.543366
+                  }
+               ],
+               "cc":"NL",
+               "city":"Lisse",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Lisse",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e58bd558877c8a76ddb5559",
+            "name":"Restaurant Kaagzicht",
+            "location":{  
+               "lat":52.2177046,
+               "lng":4.5254335,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.2177046,
+                     "lng":4.5254335
+                  }
+               ],
+               "cc":"NL",
+               "city":"Buitenkaag",
+               "state":"North Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Buitenkaag",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4ce19037825e721e13647c45",
+            "name":"Autorijschool Teylingen",
+            "location":{  
+               "address":"Venusstraat 6",
+               "lat":52.222965,
+               "lng":4.528648,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.222965,
+                     "lng":4.528648
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Venusstraat 6",
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4d5c4058fb186dcb788afd9a",
+            "name":"Nikita en lee",
+            "location":{  
+               "lat":52.229502,
+               "lng":4.529902,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.229502,
+                     "lng":4.529902
+                  }
+               ],
+               "cc":"NL",
+               "city":"Sassenheim",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Sassenheim",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"4e078aa114959022c89773a4",
+            "name":"Toko Deli Indonesian Food",
+            "location":{  
+               "address":"Gevers Deynootweg 980/6",
+               "lat":52.2251057,
+               "lng":4.5296783,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.2251057,
+                     "lng":4.5296783
+                  }
+               ],
+               "cc":"NL",
+               "city":"Scheveningen",
+               "state":"South Holland",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Gevers Deynootweg 980/6",
+                  "Scheveningen",
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         },
+         {  
+            "id":"522a2c7511d277ba33a3ee43",
+            "name":"Ristorante La Pallazina",
+            "location":{  
+               "lat":52.22149709117953,
+               "lng":4.5269850200600565,
+               "labeledLatLngs":[  
+                  {  
+                     "label":"display",
+                     "lat":52.22149709117953,
+                     "lng":4.5269850200600565
+                  }
+               ],
+               "cc":"NL",
+               "country":"Netherlands",
+               "formattedAddress":[  
+                  "Netherlands"
+               ]
+            },
+            "categories":[  
+               {  
+                  "id":"4bf58dd8d48988d110941735",
+                  "name":"Italian Restaurant",
+                  "pluralName":"Italian Restaurants",
+                  "shortName":"Italian",
+                  "icon":{  
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/italian_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "referralId":"v-1559564314",
+            "hasPerk":false
+         }
+      ]
+   }
+}

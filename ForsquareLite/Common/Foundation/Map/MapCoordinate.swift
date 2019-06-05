@@ -11,6 +11,10 @@ import UIKit
 struct MapCoordinate {
     let latitude: Double
     let longitude: Double
+    
+    static var zero: MapCoordinate {
+        return MapCoordinate(latitude: 0, longitude: 0)
+    }
 }
 
 extension MapCoordinate: CustomDebugStringConvertible {
