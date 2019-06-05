@@ -31,13 +31,22 @@ class MainFlowCoordinator: NSObject, FlowCoordinator {
     }
     
     func start() {
-        self.mapViewController?.mapDataSource = VenuesLoader(api: self.services.networkingService)
-        self.mapViewController?.router = self
+        
+        let dataSource = VenuesLoader(api: self.services.networkingService)
+        let repository = VenuesRepository()
+        
+        let mapInteractor = MapInteractorImpl(dataSource: dataSource,
+                                              repository: repository,
+                                              router: self)
+        let mapPresenter = MapPresenterImpl(interactor: mapInteractor)
+        mapPresenter.view = self.mapViewController
+        mapViewController?.presenter = mapPresenter
+        
         self.mapViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
-extension MainFlowCoordinator: MapViewControllerRouter {
+extension MainFlowCoordinator: MapRouter {
     func openDetailsForVenue(_ venue: Venue) {
         
         guard let detailsViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? RestaurantDetailsViewController else {

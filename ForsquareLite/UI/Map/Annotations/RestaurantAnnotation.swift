@@ -13,7 +13,7 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
     
     static let ReuseID = "Restaurant"
     
-    let venue: Venue
+    let venue: VenueViewModel
     var coordinate: CLLocationCoordinate2D {
         return venue.coordinate.coreLocationCoordinate
     }
@@ -22,7 +22,7 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
         return venue.name
     }
     
-    init(venue: Venue) {
+    init(venue: VenueViewModel) {
         self.venue = venue
     }
 

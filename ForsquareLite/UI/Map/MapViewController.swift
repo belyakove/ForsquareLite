@@ -10,10 +10,9 @@ import UIKit
 import MapKit
 import AlamofireImage
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MapView {
 
-    weak var router: MapViewControllerRouter?
-    var mapDataSource: MapDataSource!
+    var presenter: MapPresenter?
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -22,10 +21,15 @@ class MapViewController: UIViewController {
     
     private let locationManager = CLLocationManager()
 
-    
     var loadWorkItem: DispatchWorkItem?
     
     var currentAnnotations = Set<RestaurantAnnotation>()
+    
+    var viewModel: MapViewModel? {
+        didSet {
+            self.updateView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +48,8 @@ class MapViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadVenues(center: self.mapView.region.center, radius: self.mapView.visibleRadius)
+        
+//        self.loadVenues(center: self.mapView.region.center, radius: self.mapView.visibleRadius)
     }
 
     private func setupUserTrackingButtonAndScaleView() {
@@ -78,32 +83,17 @@ class MapViewController: UIViewController {
         
     }
     
-    private func loadVenues(inRegion region: MKCoordinateRegion) {
+    func updateView() {
         
-        let rect = MapCoordinateRect(coordinateRegion: region)
-        self.mapDataSource.venues(inRect: rect, completionBlock: { (venues, error) in
-            guard let venues = venues else {
-                return
-            }
-            let annotations = self.annotations(forVenues: venues)
-            self.updateAnnotations(annotations)
-        })
-    }
-    
-    private func loadVenues(center: CLLocationCoordinate2D, radius: Double) {
-        
-        let coordinate = MapCoordinate(coordinate: center)
-        self.mapDataSource.venues(atLocation: coordinate, radius: radius) { (venues, error) in
-            guard let venues = venues else {
-                return
-            }
-            
-            let annotations = self.annotations(forVenues: venues)
-            self.updateAnnotations(annotations)
+        guard let venueViewModels = self.viewModel?.venuesModels else {
+            return
         }
+        
+        let annotations = self.annotations(forVenues: venueViewModels)
+        self.updateAnnotations(annotations)
     }
     
-    private func annotations(forVenues venues: [Venue]) -> Set<RestaurantAnnotation> {
+    private func annotations(forVenues venues: [VenueViewModel]) -> Set<RestaurantAnnotation> {
         var annotations = Set<RestaurantAnnotation>()
         for venue in venues {
             let annotation = RestaurantAnnotation(venue: venue)
@@ -142,7 +132,7 @@ extension MapViewController: MKMapViewDelegate {
         guard let venue = (view.annotation as? RestaurantAnnotation)?.venue else {
             return
         }
-        self.router?.openDetailsForVenue(venue)
+        self.presenter?.mapView(self, didRequestOpenDetailsForVenueWithID: venue.id)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -176,7 +166,11 @@ extension MapViewController: MKMapViewDelegate {
                 coordinate = mapView.region.center
             }
             
-            strongSelf.loadVenues(center: coordinate, radius: mapView.visibleRadius)
+            let mapCoordinate = MapCoordinate(coordinate)
+            
+            strongSelf.presenter?.mapView(strongSelf,
+                                          didUpdateCenter: mapCoordinate,
+                                          radius: mapView.visibleRadius)
         })
         
         self.loadWorkItem = loadWorkItem

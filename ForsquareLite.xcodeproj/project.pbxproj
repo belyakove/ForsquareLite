@@ -45,7 +45,7 @@
 		44ABE36322A681A80036AA05 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABE36222A681A80036AA05 /* AlamofireImage.framework */; };
 		44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */; };
 		44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */; };
-		44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */; };
+		44ABE36A22A6AB590036AA05 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36922A6AB590036AA05 /* MapRouter.swift */; };
 		44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */; };
 		44ABE36E22A7107F0036AA05 /* DetailsRequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36D22A7107F0036AA05 /* DetailsRequestParser.swift */; };
 		44ABE37022A713BC0036AA05 /* VenueDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABE36F22A713BC0036AA05 /* VenueDetails.swift */; };
@@ -62,6 +62,15 @@
 		44BEDFE122A7F65B007C1105 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFE022A7F65B007C1105 /* UIView+Nib.swift */; };
 		44BEDFE322A7F68F007C1105 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFE222A7F68F007C1105 /* PhotoView.swift */; };
 		44BEDFE522A7F750007C1105 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BEDFE422A7F750007C1105 /* PhotoView.xib */; };
+		44BEDFE922A813A2007C1105 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFE822A813A2007C1105 /* MapView.swift */; };
+		44BEDFEB22A8148C007C1105 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFEA22A8148C007C1105 /* MapPresenter.swift */; };
+		44BEDFED22A814A0007C1105 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFEC22A814A0007C1105 /* MapViewModel.swift */; };
+		44BEDFEF22A814DD007C1105 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFEE22A814DD007C1105 /* VenueViewModel.swift */; };
+		44BEDFF122A81682007C1105 /* MapInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF022A81682007C1105 /* MapInteractorImpl.swift */; };
+		44BEDFF322A8183B007C1105 /* MapInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF222A8183B007C1105 /* MapInteractorState.swift */; };
+		44BEDFF522A81993007C1105 /* VenuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF422A81993007C1105 /* VenuesRepository.swift */; };
+		44BEDFF722A81F28007C1105 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF622A81F28007C1105 /* MapInteractor.swift */; };
+		44BEDFF922A81FC0007C1105 /* MapPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,7 +114,7 @@
 		44ABE36222A681A80036AA05 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		44ABE36522A682550036AA05 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		44ABE36722A6AAF60036AA05 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
-		44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRouter.swift; sourceTree = "<group>"; };
+		44ABE36922A6AB590036AA05 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		44ABE36B22A6B2240036AA05 /* DetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRequest.swift; sourceTree = "<group>"; };
 		44ABE36D22A7107F0036AA05 /* DetailsRequestParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRequestParser.swift; sourceTree = "<group>"; };
 		44ABE36F22A713BC0036AA05 /* VenueDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetails.swift; sourceTree = "<group>"; };
@@ -122,6 +131,15 @@
 		44BEDFE022A7F65B007C1105 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		44BEDFE222A7F68F007C1105 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		44BEDFE422A7F750007C1105 /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		44BEDFE822A813A2007C1105 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		44BEDFEA22A8148C007C1105 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		44BEDFEC22A814A0007C1105 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		44BEDFEE22A814DD007C1105 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		44BEDFF022A81682007C1105 /* MapInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorImpl.swift; sourceTree = "<group>"; };
+		44BEDFF222A8183B007C1105 /* MapInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorState.swift; sourceTree = "<group>"; };
+		44BEDFF422A81993007C1105 /* VenuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRepository.swift; sourceTree = "<group>"; };
+		44BEDFF622A81F28007C1105 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +335,15 @@
 			isa = PBXGroup;
 			children = (
 				445F5D2522A52FB300178CC7 /* MapViewController.swift */,
+				44BEDFE822A813A2007C1105 /* MapView.swift */,
+				44BEDFEA22A8148C007C1105 /* MapPresenter.swift */,
+				44BEDFF822A81FC0007C1105 /* MapPresenterImpl.swift */,
+				44BEDFF622A81F28007C1105 /* MapInteractor.swift */,
+				44BEDFF022A81682007C1105 /* MapInteractorImpl.swift */,
+				44BEDFEC22A814A0007C1105 /* MapViewModel.swift */,
+				44BEDFEE22A814DD007C1105 /* VenueViewModel.swift */,
+				44BEDFF222A8183B007C1105 /* MapInteractorState.swift */,
+				44BEDFF422A81993007C1105 /* VenuesRepository.swift */,
 				44ABE36422A682350036AA05 /* Annotations */,
 			);
 			path = Map;
@@ -326,7 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				44ABE35A22A662CB0036AA05 /* MainFlowCoordinator.swift */,
-				44ABE36922A6AB590036AA05 /* MapViewControllerRouter.swift */,
+				44ABE36922A6AB590036AA05 /* MapRouter.swift */,
 				44BEDFDB22A7EFC1007C1105 /* RestaurantDetailsRouter.swift */,
 			);
 			path = Routers;
@@ -495,21 +522,26 @@
 				44ABE32322A536120036AA05 /* BasicAPIRequest.swift in Sources */,
 				44ABE35322A5CAEC0036AA05 /* MapDataSource.swift in Sources */,
 				44ABE32122A536120036AA05 /* NetworkingService.swift in Sources */,
+				44BEDFE922A813A2007C1105 /* MapView.swift in Sources */,
 				445F5D2622A52FB300178CC7 /* MapViewController.swift in Sources */,
 				44ABE33F22A54FB20036AA05 /* FoursquareAPIService.swift in Sources */,
 				44ABE36622A682550036AA05 /* RestaurantAnnotation.swift in Sources */,
+				44BEDFF122A81682007C1105 /* MapInteractorImpl.swift in Sources */,
 				44ABE37722A71AC50036AA05 /* UIColor+Hex.swift in Sources */,
 				44ABE33622A53F8E0036AA05 /* SearchRequest.swift in Sources */,
-				44ABE36A22A6AB590036AA05 /* MapViewControllerRouter.swift in Sources */,
+				44ABE36A22A6AB590036AA05 /* MapRouter.swift in Sources */,
 				44ABE36C22A6B2240036AA05 /* DetailsRequest.swift in Sources */,
 				44ABE34B22A55C1D0036AA05 /* DefaultAPIParser.swift in Sources */,
 				44ABE34922A556620036AA05 /* FoursquareAuthenticationInterceptor.swift in Sources */,
 				44ABE33022A537A60036AA05 /* ServicesProvider.swift in Sources */,
 				44ABE32022A536120036AA05 /* NetworkingServiceImpl.swift in Sources */,
 				44ABE31F22A536120036AA05 /* APIParser.swift in Sources */,
+				44BEDFF522A81993007C1105 /* VenuesRepository.swift in Sources */,
 				44ABE36822A6AAF60036AA05 /* RestaurantDetailsViewController.swift in Sources */,
+				44BEDFED22A814A0007C1105 /* MapViewModel.swift in Sources */,
 				44ABE35F22A66D230036AA05 /* MKMapView+Utilities.swift in Sources */,
 				44BEDFD822A7E61D007C1105 /* WebsiteView.swift in Sources */,
+				44BEDFF722A81F28007C1105 /* MapInteractor.swift in Sources */,
 				44ABE37522A714F10036AA05 /* Price.swift in Sources */,
 				44ABE32422A536120036AA05 /* Services.swift in Sources */,
 				44ABE35522A5CBD40036AA05 /* VenuesLoader.swift in Sources */,
@@ -526,11 +558,15 @@
 				44ABE33C22A540610036AA05 /* MapCoordinateRect+MapKit.swift in Sources */,
 				44ABE37322A714080036AA05 /* Rating.swift in Sources */,
 				445F5D2422A52FB300178CC7 /* AppDelegate.swift in Sources */,
+				44BEDFEB22A8148C007C1105 /* MapPresenter.swift in Sources */,
 				44BEDFDC22A7EFC1007C1105 /* RestaurantDetailsRouter.swift in Sources */,
+				44BEDFF922A81FC0007C1105 /* MapPresenterImpl.swift in Sources */,
 				44BEDFE122A7F65B007C1105 /* UIView+Nib.swift in Sources */,
 				44ABE35B22A662CB0036AA05 /* MainFlowCoordinator.swift in Sources */,
+				44BEDFEF22A814DD007C1105 /* VenueViewModel.swift in Sources */,
 				44ABE34222A551BE0036AA05 /* AuthenticationInfo.swift in Sources */,
 				44ABE35722A662790036AA05 /* FlowCoordinator.swift in Sources */,
+				44BEDFF322A8183B007C1105 /* MapInteractorState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

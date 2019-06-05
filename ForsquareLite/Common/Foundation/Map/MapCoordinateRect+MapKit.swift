@@ -11,7 +11,7 @@ import MapKit
 
 extension MapCoordinateRect {
 
-    init(coordinateRegion region: MKCoordinateRegion) {
+    init(_ region: MKCoordinateRegion) {
         self.south = region.center.latitude - region.span.latitudeDelta / 2.0
         self.west = region.center.longitude - region.span.longitudeDelta / 2.0
         self.north = region.center.latitude + region.span.latitudeDelta / 2.0

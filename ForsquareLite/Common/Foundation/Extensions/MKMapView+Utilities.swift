@@ -12,7 +12,7 @@ import MapKit
 extension MKMapView {
     var visibleRadius:Double {
         
-        let coordinateRect = MapCoordinateRect(coordinateRegion: self.region)
+        let coordinateRect = MapCoordinateRect(self.region)
         let topLeft = CLLocation(latitude: coordinateRect.north,
                                  longitude: coordinateRect.west)
         let topRight = CLLocation(latitude: coordinateRect.north,

@@ -1,5 +1,5 @@
 //
-//  MapViewControllerRouter.swift
+//  MapViewRouter.swift
 //  ForsquareLite
 //
 //  Created by Eugene Belyakov on 04/06/2019.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol MapViewControllerRouter: class {
-    func openDetailsForVenue(_ venue: Venue) -> Void
+protocol MapRouter: class {
+    func openDetailsForVenue(_ venue: Venue)
 }

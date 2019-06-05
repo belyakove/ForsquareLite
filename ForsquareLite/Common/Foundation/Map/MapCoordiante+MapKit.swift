@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 extension MapCoordinate {
-    init(coordinate: CLLocationCoordinate2D) {
+    init(_ coordinate: CLLocationCoordinate2D) {
         self.latitude = coordinate.latitude
         self.longitude = coordinate.longitude
     }
