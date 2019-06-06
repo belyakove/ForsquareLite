@@ -29,7 +29,7 @@ class SearchRequest: BasicAPIRequest {
     
     init(center: MapCoordinate, radius: Double) {
         self.center = center
-        self.radius = min(radius, 1000000)
+        self.radius = min(radius, 100000)
         super.init()
     }
     
